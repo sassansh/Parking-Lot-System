@@ -181,3 +181,14 @@ INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Addre
 INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C3', 'Gagan', 'Patel', '2503456789', '520 Oak Dr', 'gpatel@gmail.com');
 INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C4', 'Xiyu', 'Wang', '7789385723', '220 Boulder Ave', 'xwang@gmail.com');
 INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C5', 'Franklin', 'Clinton', '2360439587', '55 Ioco Rd', 'fclinton@gmail.com');
+
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E1', 'DaMarcus', '22-mar-19', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E2', 'Charlie', '04-oct-19', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E3', 'Vincent', '14-jan-20', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E4', 'Hikaru', '30-aug-17', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E5', 'Sara', '06-jul-18', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E6', 'Margaret', '17-jun-15', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E7', 'Walter', '01-dec-13', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E8', 'Shannon', '24-feb-09', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E9', 'Bart', '05-may-16', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E10', 'Lisa', '07-jun-06', 'ACTIVE');

@@ -163,6 +163,8 @@ CREATE TABLE Parking_Pass
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
 );
 
+
+
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C1', 'AB123C');
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C2', 'DE456F');
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C3', 'GH789I');
@@ -174,5 +176,8 @@ INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C8', 'VW234X');
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C9', 'YZ567A');
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C10', 'AB890C');
 
-
-
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C1', 'John', 'Park', '7783456789', '120 Smith St', 'jpark@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C2', 'Samantha', 'James', '6043456789', '360 Night Blvd', 'sjames@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C3', 'Gagan', 'Patel', '2503456789', '520 Oak Dr', 'gpatel@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C4', 'Xiyu', 'Wang', '7789385723', '220 Boulder Ave', 'xwang@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C5', 'Franklin', 'Clinton', '2360439587', '55 Ioco Rd', 'fclinton@gmail.com');

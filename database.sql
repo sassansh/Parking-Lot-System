@@ -47,6 +47,7 @@ CREATE TABLE Parking_Lot_Employee
 (
     Employee_ID Char(255),
     First_Name Char(255) NOT NULL,
+    Last_Name Char(255) NOT NULL,
     Hiring_Date DATE NOT NULL,
     Employment_Status Char(8) DEFAULT 'ACTIVE',
     Primary Key (Employee_ID)
@@ -71,10 +72,10 @@ CREATE TABLE Manager_Salary
 
 CREATE TABLE Manager_ID_Manager_Type
 (
-    Employee_ID CHAR(255),
+    Manager_ID CHAR(255),
     Manager_Type CHAR(255),
-    PRIMARY KEY (Employee_ID,Manager_Type),
-    FOREIGN KEY (Employee_ID) REFERENCES Parking_Lot_Employee(Employee_ID) ON DELETE CASCADE,
+    PRIMARY KEY (Manager_ID,Manager_Type),
+    FOREIGN KEY (Manager_ID) REFERENCES Manager(Manager_ID) ON DELETE CASCADE,
     FOREIGN KEY (Manager_Type) REFERENCES Manager_Salary(Manager_Type)
 );
 
@@ -163,8 +164,6 @@ CREATE TABLE Parking_Pass
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
 );
 
-
-
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C1', 'AB123C');
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C2', 'DE456F');
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C3', 'GH789I');
@@ -182,13 +181,26 @@ INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Addre
 INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C4', 'Xiyu', 'Wang', '7789385723', '220 Boulder Ave', 'xwang@gmail.com');
 INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C5', 'Franklin', 'Clinton', '2360439587', '55 Ioco Rd', 'fclinton@gmail.com');
 
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E1', 'DaMarcus', '22-mar-19', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E2', 'Charlie', '04-oct-19', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E3', 'Vincent', '14-jan-20', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E4', 'Hikaru', '30-aug-17', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E5', 'Sara', '06-jul-18', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E6', 'Margaret', '17-jun-15', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E7', 'Walter', '01-dec-13', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E8', 'Shannon', '24-feb-09', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E9', 'Bart', '05-may-16', 'ACTIVE');
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Hiring_Date, Employment_Status) values ('E10', 'Lisa', '07-jun-06', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E1', 'DaMarcus', 'James', '22-mar-19', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E2', 'Charlie', 'Dang', '04-oct-19', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E3', 'Vincent', 'Davidson', '14-jan-20', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E4', 'Hikaru', 'Nakamura', '30-aug-17', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E5', 'Sara', 'Rhodes', '06-jul-18', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E6', 'Margaret', 'Von Dutch', '17-jun-15', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E7', 'Walter', 'White', '01-dec-13', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E8', 'Shannon', 'Fitzgerald', '24-feb-09', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E9', 'Bart', 'Simpson', '05-may-16', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E10', 'Lisa', 'Samani', '07-jun-06', 'ACTIVE');
+
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E10', 'M5', null);
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E8', 'M3', 'M5');
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E7', 'M2', 'M3');
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E9', 'M4', 'M2');
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E6', 'M1', 'M2');
+
+
+
+
+
+
+

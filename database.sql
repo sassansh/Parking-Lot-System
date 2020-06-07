@@ -162,3 +162,7 @@ CREATE TABLE Parking_Pass
     FOREIGN KEY (Space_ID, Lot_ID) REFERENCES Parking_Space(Space_ID,Lot_ID) ON DELETE CASCADE,
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
 );
+
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C1', 'AB123C');
+
+

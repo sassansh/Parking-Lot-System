@@ -198,6 +198,11 @@ INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E7', 'M2',
 INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E9', 'M4', 'M2');
 INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E6', 'M1', 'M2');
 
+INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Lot Manager', 50000);
+INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Regional Manager', 70000);
+INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Assistant Director', 80000);
+INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Director', 90000);
+
 
 
 

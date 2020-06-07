@@ -164,5 +164,15 @@ CREATE TABLE Parking_Pass
 );
 
 INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C1', 'AB123C');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C2', 'DE456F');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C3', 'GH789I');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C4', 'JK012L');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C5', 'MN345O');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C6', 'PQ678R');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C7', 'ST901U');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C8', 'VW234X');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C9', 'YZ567A');
+INSERT INTO CUSTOMER (Customer_ID, License_Plate) values ('C10', 'AB890C');
+
 
 

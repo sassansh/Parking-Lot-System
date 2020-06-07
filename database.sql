@@ -161,7 +161,7 @@ CREATE TABLE Parking_Pass
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
 );
 
-
+-- INSERT STATEMENTS
 
 INSERT INTO Officer VALUES ('E1', 'O1', 'Day','M1');
 INSERT INTO Officer VALUES ('E2', 'O2', 'Day', 'M1');

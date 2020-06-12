@@ -101,9 +101,9 @@ CREATE TABLE Fine
     Fine_ID CHAR(255) PRIMARY KEY,
     Officer_ID CHAR(255) NOT NULL,
     Customer_ID CHAR(255) NOT NULL,
-    Issue_Date_Time TIMESTAMP NOT NULL,
-    Must_Be_Paid_By_Date TIMESTAMP NOT NULL,
-    Date_Time_Paid_On TIMESTAMP,
+    Issue_Date_Time DATETIME NOT NULL,
+    Must_Be_Paid_By_Date DATETIME NOT NULL,
+    Date_Time_Paid_On DATETIME,
     FOREIGN KEY (Officer_ID) REFERENCES Officer(Officer_ID),
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
 );
@@ -139,8 +139,8 @@ CREATE TABLE Patrols
 CREATE TABLE Parking_Slip
 (
     Parking_Slip_ID char(255) PRIMARY KEY,
-    Issue_Date_Time TIMESTAMP NOT  NULL,
-    Expiry_Date_Time TIMESTAMP NOT  NULL,
+    Issue_Date_Time DATETIME NOT  NULL,
+    Expiry_Date_Time DATETIME NOT  NULL,
     Lot_ID char(255) NOT  NULL,
     Space_ID INT NOT  NULL,
     Customer_ID char(255) NOT  NULL,
@@ -151,8 +151,8 @@ CREATE TABLE Parking_Slip
 CREATE TABLE Parking_Pass
 (
     Parking_Pass_ID char(255) PRIMARY KEY,
-    Issue_Date_Time TIMESTAMP NOT  NULL,
-    Expiry_Date_Time TIMESTAMP NOT  NULL,
+    Issue_Date_Time DATETIME NOT  NULL,
+    Expiry_Date_Time DATETIME NOT  NULL,
     Lot_ID char(255) NOT  NULL,
     Space_ID INT NOT  NULL,
     Customer_ID char(255) NOT  NULL,

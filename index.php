@@ -1,6 +1,6 @@
+<?php include_once 'config/init.php' ?>
+
 <?php
-    include 'db_config/db_connect.php';
-    $conn = OpenCon();
-    echo "Connected Successfully";
-    CloseCon($conn);
-?>
+$template = new Template('templates/frontpage.php');
+$template -> title = 'FrontPage';
+echo $template;

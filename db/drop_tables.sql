@@ -1,0 +1,17 @@
+drop table PASS_HOLDER cascade constraints;
+drop table MANAGER_ID_MANAGER_TYPE cascade constraints;
+drop table MANAGER_SALARY cascade constraints;
+drop table FINE_ID_FINE_TYPE cascade constraints;
+drop table FINE cascade constraints;
+drop table FINE_TYPE_COST cascade constraints;
+drop table COSTS cascade constraints;
+drop table RATE cascade constraints;
+drop table PATROLS cascade constraints;
+drop table OFFICER cascade constraints;
+drop table MANAGER cascade constraints;
+drop table PARKING_LOT_EMPLOYEE cascade constraints;
+drop table PARKING_SLIP cascade constraints;
+drop table PARKING_PASS cascade constraints;
+drop table PARKING_SPACE cascade constraints;
+drop table PARKING_LOT cascade constraints;
+drop table CUSTOMER cascade constraints;

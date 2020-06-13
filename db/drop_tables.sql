@@ -1,0 +1,17 @@
+drop table Parking_Pass;
+drop table Parking_Slip;
+drop table Patrols;
+drop table Costs;
+drop table Fine_ID_Fine_Type;
+drop table Fine;
+drop table Fine_Type_Cost;
+drop table Officer;
+drop table Manager_ID_Manager_Type;
+drop table Manager_Salary;
+drop table Manager;
+drop table Parking_Lot_Employee;
+drop table Pass_Holder;
+drop table Customer;
+drop table Rate;
+drop table Parking_Space;
+drop table Parking_Lot;

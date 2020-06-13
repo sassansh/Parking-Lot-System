@@ -1,15 +1,15 @@
 CREATE TABLE Parking_Lot
 (
     Lot_ID char(255) PRIMARY KEY,
-    Address char(60) UNIQUE NOT NULL
+    Address char(255) UNIQUE NOT NULL
 );
 
 CREATE TABLE Parking_Space
 (
     Space_ID INT,
     Lot_ID char(255),
-    Is_Occupied char(5) NOT NULL,
-    Space_Type char(20) NOT NULL,
+    Space_Type char(255) NOT NULL,
+    Is_Occupied char(255) NOT NULL,
     PRIMARY KEY (Space_ID, Lot_ID),
     FOREIGN KEY (Lot_ID) REFERENCES Parking_Lot(Lot_ID) ON DELETE CASCADE
 );
@@ -17,17 +17,17 @@ CREATE TABLE Parking_Space
 CREATE TABLE Rate
 (
     Rate_ID char(255),
-    Description char(60),
-    Hourly_Rate DECIMAL(4,2) CHECK (Hourly_Rate > 0),
-    Day_Rate DECIMAL(4,2) CHECK (Day_Rate > 0),
-    Monthly_Rate DECIMAL(4,2) CHECK (Monthly_Rate > 0),
+    Description char(255),
+    Hourly_Rate DECIMAL(10,2) CHECK (Hourly_Rate > 0),
+    Day_Rate DECIMAL(10,2) CHECK (Day_Rate > 0),
+    Monthly_Rate DECIMAL(10,2) CHECK (Monthly_Rate > 0),
     PRIMARY KEY (Rate_ID)
 );
 
 CREATE TABLE Customer
 (
     Customer_ID Char(255),
-    License_Plate Char(6) NOT NULL,
+    License_Plate Char(255) NOT NULL,
     Primary Key (Customer_ID)
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE Pass_Holder
     Customer_ID Char(255),
     First_Name Char(255) NOT NULL,
     Last_Name Char(255) NOT NULL,
-    Phone_Number Char(10) NOT NULL UNIQUE,
+    Phone_Number Char(255) NOT NULL UNIQUE,
     Address Char(255) NOT NULL,
     Email Char(255) NOT NULL UNIQUE,
     Primary Key (Customer_ID),
@@ -49,7 +49,7 @@ CREATE TABLE Parking_Lot_Employee
     First_Name Char(255) NOT NULL,
     Last_Name Char(255) NOT NULL,
     Hiring_Date DATE NOT NULL,
-    Employment_Status Char(8) DEFAULT 'ACTIVE',
+    Employment_Status Char(255) DEFAULT 'ACTIVE',
     Primary Key (Employee_ID)
 );
 
@@ -67,7 +67,7 @@ CREATE TABLE Manager
 CREATE TABLE Manager_Salary
 (
     Manager_Type CHAR(255) PRIMARY KEY,
-    Salary DECIMAL (7,2) CHECK (Salary > 0)
+    Salary DECIMAL (10,2) CHECK (Salary > 0)
 );
 
 CREATE TABLE Manager_ID_Manager_Type
@@ -84,17 +84,16 @@ CREATE TABLE Officer
 (
     Employee_ID CHAR(255) PRIMARY KEY,
     Officer_ID CHAR(255) NOT NULL UNIQUE,
-    Shift CHAR(8),
+    Shift CHAR(255),
     Managed_By_ID CHAR(255) NOT NULL,
     FOREIGN KEY (Employee_ID) REFERENCES Parking_Lot_Employee(Employee_ID) ON DELETE CASCADE,
     FOREIGN KEY (Managed_By_ID) REFERENCES Manager(Manager_ID)
 );
 
-
 CREATE TABLE Fine_Type_Cost
 (
     Fine_Type CHAR(255) PRIMARY KEY,
-    Cost DECIMAL(4,2) CHECK (Cost > 0)
+    Cost DECIMAL(10,2) CHECK (Cost > 0)
 );
 
 CREATE TABLE Fine
@@ -102,13 +101,11 @@ CREATE TABLE Fine
     Fine_ID CHAR(255) PRIMARY KEY,
     Officer_ID CHAR(255) NOT NULL,
     Customer_ID CHAR(255) NOT NULL,
-    Fine_Type CHAR(255) NOT NULL,
-    Issue_Date_Time TIMESTAMP NOT NULL,
-    Must_Be_Paid_By_Date TIMESTAMP NOT NULL,
-    Date_Time_Paid_On TIMESTAMP,
+    Issue_Date_Time DATETIME NOT NULL,
+    Must_Be_Paid_By_Date DATETIME NOT NULL,
+    Date_Time_Paid_On DATETIME,
     FOREIGN KEY (Officer_ID) REFERENCES Officer(Officer_ID),
-    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
-    FOREIGN KEY (Fine_Type) REFERENCES Fine_Type_Cost(Fine_Type)
+    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
 );
 
 CREATE TABLE Fine_ID_Fine_Type
@@ -119,7 +116,6 @@ CREATE TABLE Fine_ID_Fine_Type
     FOREIGN KEY (Fine_ID) REFERENCES Fine(Fine_ID) ON DELETE CASCADE,
     FOREIGN KEY (Fine_Type) REFERENCES Fine_Type_Cost(Fine_Type)
 );
-
 
 CREATE TABLE Costs
 (
@@ -143,10 +139,10 @@ CREATE TABLE Patrols
 CREATE TABLE Parking_Slip
 (
     Parking_Slip_ID char(255) PRIMARY KEY,
-    Issue_Date_Time TIMESTAMP NOT  NULL,
-    Expiry_Date_Time TIMESTAMP NOT  NULL,
-    Space_ID INT NOT  NULL,
+    Issue_Date_Time DATETIME NOT  NULL,
+    Expiry_Date_Time DATETIME NOT  NULL,
     Lot_ID char(255) NOT  NULL,
+    Space_ID INT NOT  NULL,
     Customer_ID char(255) NOT  NULL,
     FOREIGN KEY (Space_ID, Lot_ID) REFERENCES Parking_Space(Space_ID,Lot_ID) ON DELETE CASCADE,
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
@@ -155,10 +151,10 @@ CREATE TABLE Parking_Slip
 CREATE TABLE Parking_Pass
 (
     Parking_Pass_ID char(255) PRIMARY KEY,
-    Issue_Date_Time TIMESTAMP NOT  NULL,
-    Expiry_Date_Time TIMESTAMP NOT  NULL,
-    Space_ID INT NOT  NULL,
+    Issue_Date_Time DATETIME NOT  NULL,
+    Expiry_Date_Time DATETIME NOT  NULL,
     Lot_ID char(255) NOT  NULL,
+    Space_ID INT NOT  NULL,
     Customer_ID char(255) NOT  NULL,
     FOREIGN KEY (Space_ID, Lot_ID) REFERENCES Parking_Space(Space_ID,Lot_ID) ON DELETE CASCADE,
     FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE

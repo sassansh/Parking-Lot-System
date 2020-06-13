@@ -32,11 +32,11 @@ INSERT INTO Customer (Customer_ID, License_Plate) values ('C8', 'VW234X');
 INSERT INTO Customer (Customer_ID, License_Plate) values ('C9', 'YZ567A');
 INSERT INTO Customer (Customer_ID, License_Plate) values ('C10', 'AB890C');
 
-INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C1', 'John', 'Park', '7783456789', '120 Smith St', 'jpark@gmail.com');
-INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C2', 'Samantha', 'James', '6043456789', '360 Night Blvd', 'sjames@gmail.com');
-INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C3', 'Gagan', 'Patel', '2503456789', '520 Oak Dr', 'gpatel@gmail.com');
-INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C4', 'Xiyu', 'Wang', '7789385723', '220 Boulder Ave', 'xwang@gmail.com');
-INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C5', 'Franklin', 'Clinton', '2360439587', '55 Ioco Rd', 'fclinton@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C6', 'John', 'Park', '7783456789', '120 Smith St', 'jpark@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C7', 'Samantha', 'James', '6043456789', '360 Night Blvd', 'sjames@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C8', 'Gagan', 'Patel', '2503456789', '520 Oak Dr', 'gpatel@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C9', 'Xiyu', 'Wang', '7789385723', '220 Boulder Ave', 'xwang@gmail.com');
+INSERT INTO Pass_Holder (Customer_ID, First_Name, Last_Name, Phone_Number, Address, Email)  values ('C10', 'Franklin', 'Clinton', '2360439587', '55 Ioco Rd', 'fclinton@gmail.com');
 
 INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E1', 'DaMarcus', 'James', '2019-03-22', 'ACTIVE'); 
 INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E2', 'Charlie', 'Dang', '2019-10-04', 'ACTIVE'); 

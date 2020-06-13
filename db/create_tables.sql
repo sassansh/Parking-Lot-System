@@ -157,5 +157,5 @@ CREATE TABLE Parking_Pass
     Space_ID INT NOT  NULL,
     Customer_ID char(255) NOT  NULL,
     FOREIGN KEY (Space_ID, Lot_ID) REFERENCES Parking_Space(Space_ID,Lot_ID) ON DELETE CASCADE,
-    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID) ON DELETE CASCADE
+    FOREIGN KEY (Customer_ID) REFERENCES Pass_Holder(Customer_ID) ON DELETE CASCADE
 );

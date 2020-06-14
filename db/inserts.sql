@@ -4,6 +4,12 @@ INSERT INTO Parking_Lot VALUES ('L3', '3074 Montreal Road');
 INSERT INTO Parking_Lot VALUES ('L4', '4894 York St');
 INSERT INTO Parking_Lot VALUES ('L5', '3355 3rd Avenue');
 
+INSERT INTO Rate VALUES ('Small', 2.50, 20.00, 600.00);
+INSERT INTO Rate VALUES ('Charging', 3.50, 30.00, 800.00);
+INSERT INTO Rate VALUES ('Handicap', 2.00, 15.00, 500.00);
+INSERT INTO Rate VALUES ('Large', 3.00, 30.00, 700.00);
+INSERT INTO Rate VALUES ('Medium', 2.80, 25.00, 650.00);
+
 INSERT INTO Parking_Space VALUES (11 , 'L1', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (12 , 'L2', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (13 , 'L3', 'Charging', 'TRUE');
@@ -14,12 +20,6 @@ INSERT INTO Parking_Space VALUES (17 , 'L4', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (18 , 'L5', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (19 , 'L5', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (20 , 'L5', 'Small', 'TRUE');
-
-INSERT INTO Rate VALUES ('R1' , 'Small', 2.50, 20.00, 600.00);
-INSERT INTO Rate VALUES ('R2' , 'Charging', 3.50, 30.00, 800.00);
-INSERT INTO Rate VALUES ('R3' , 'Handicap', 2.00, 15.00, 500.00);
-INSERT INTO Rate VALUES ('R4' , 'Large', 3.00, 30.00, 700.00);
-INSERT INTO Rate VALUES ('R5' , 'Medium', 2.80, 25.00, 650.00);
 
 INSERT INTO Customer (Customer_ID, License_Plate) values ('C1', 'AB123C');
 INSERT INTO Customer (Customer_ID, License_Plate) values ('C2', 'DE456F');
@@ -89,12 +89,6 @@ INSERT INTO Fine_ID_Fine_Type VALUES  ('F2', 'Over Time Limit ');
 INSERT INTO Fine_ID_Fine_Type VALUES  ('F3', 'Over Time Limit ');
 INSERT INTO Fine_ID_Fine_Type VALUES  ('F4', 'Over Time Limit ');
 INSERT INTO Fine_ID_Fine_Type VALUES  ('F5', 'Parking In Emergency Vehicle Space');
-
-INSERT INTO Costs VALUES ('L1', 11, 'R1');
-INSERT INTO Costs VALUES ('L2', 12, 'R1');
-INSERT INTO Costs VALUES ('L3', 13, 'R3');
-INSERT INTO Costs VALUES ('L4', 14, 'R4');
-INSERT INTO Costs VALUES ('L5', 15, 'R4');
 
 INSERT INTO Patrols VALUES ('O1', 'L1');
 INSERT INTO Patrols VALUES ('O2', 'L2');

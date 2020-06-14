@@ -7,11 +7,11 @@ class Database {
 
     private $dbh;
     private $error;
-    private $statment;
+    private $stmt;
 
     public function __construct() {
         // SET DSN
-        $dsn = 'mysql"host=' .$this->host. ';dbname='. $this->dbname;
+        $dsn = 'mysql:host=' .$this->host. ';dbname='. $this->dbname;
 
         // SET OPTIONS
         $options = array(
@@ -51,11 +51,26 @@ class Database {
     }
 
     public function execute() {
-        return $this->stmt->execute();
+        try { 
+            return $this->stmt->execute();
+        } catch (PDOException $e) { 
+            $this->error = $e->getMessage(); // this is not working
+        }
     }
 
+    // RETURN ALL RECORDS
     public function resultSet(){
         $this->execute();
         return $this->stmt->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    // RETURNS A SINGLE RECORD
+    public function single(){
+        $this->execute();
+        return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function errorInfo() {
+        return $this->error; // I don't think this is working as well
     }
 }

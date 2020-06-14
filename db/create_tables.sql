@@ -4,6 +4,15 @@ CREATE TABLE Parking_Lot
     Address char(255) UNIQUE NOT NULL
 );
 
+CREATE TABLE Rate
+(
+    Rate_Type char(255),
+    Hourly_Rate DECIMAL(10,2) CHECK (Hourly_Rate > 0),
+    Day_Rate DECIMAL(10,2) CHECK (Day_Rate > 0),
+    Monthly_Rate DECIMAL(10,2) CHECK (Monthly_Rate > 0),
+    PRIMARY KEY (Rate_Type)
+);
+
 CREATE TABLE Parking_Space
 (
     Space_ID INT,
@@ -11,17 +20,8 @@ CREATE TABLE Parking_Space
     Space_Type char(255) NOT NULL,
     Is_Occupied char(255) NOT NULL,
     PRIMARY KEY (Space_ID, Lot_ID),
-    FOREIGN KEY (Lot_ID) REFERENCES Parking_Lot(Lot_ID) ON DELETE CASCADE
-);
-
-CREATE TABLE Rate
-(
-    Rate_ID char(255),
-    Description char(255),
-    Hourly_Rate DECIMAL(10,2) CHECK (Hourly_Rate > 0),
-    Day_Rate DECIMAL(10,2) CHECK (Day_Rate > 0),
-    Monthly_Rate DECIMAL(10,2) CHECK (Monthly_Rate > 0),
-    PRIMARY KEY (Rate_ID)
+    FOREIGN KEY (Lot_ID) REFERENCES Parking_Lot(Lot_ID) ON DELETE CASCADE,
+    FOREIGN KEY (Space_Type) References Rate(Rate_Type)
 );
 
 CREATE TABLE Customer
@@ -115,16 +115,6 @@ CREATE TABLE Fine_ID_Fine_Type
     PRIMARY KEY (Fine_ID, Fine_Type),
     FOREIGN KEY (Fine_ID) REFERENCES Fine(Fine_ID) ON DELETE CASCADE,
     FOREIGN KEY (Fine_Type) REFERENCES Fine_Type_Cost(Fine_Type)
-);
-
-CREATE TABLE Costs
-(
-    Lot_ID CHAR(255),
-    Space_ID INT,
-    Rate_ID CHAR(255) NOT NULL,
-    PRIMARY KEY (Lot_ID, Space_ID),
-    FOREIGN KEY (Lot_ID, Space_ID) REFERENCES Parking_Space(Lot_ID, Space_ID),
-    FOREIGN KEY (Rate_ID) References Rate(Rate_ID)
 );
 
 CREATE TABLE Patrols

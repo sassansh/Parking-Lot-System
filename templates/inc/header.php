@@ -20,3 +20,4 @@
     </li>
   </ul>
 </nav>
+<?php displayMessage(); ?>

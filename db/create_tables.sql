@@ -15,10 +15,10 @@ CREATE TABLE Rate
 
 CREATE TABLE Parking_Space
 (
-    Space_ID INT,
+    Space_ID INT AUTO_INCREMENT,
     Lot_ID char(255),
     Space_Type char(255) NOT NULL,
-    Is_Occupied char(255) NOT NULL,
+    Is_Occupied char(255) DEFAULT 'False',
     PRIMARY KEY (Space_ID, Lot_ID),
     FOREIGN KEY (Lot_ID) REFERENCES Parking_Lot(Lot_ID) ON DELETE CASCADE,
     FOREIGN KEY (Space_Type) References Rate(Rate_Type)

@@ -20,6 +20,11 @@ INSERT INTO Parking_Space VALUES (17 , 'L4', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (18 , 'L5', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (19 , 'L5', 'Small', 'TRUE');
 INSERT INTO Parking_Space VALUES (20 , 'L5', 'Small', 'TRUE');
+INSERT INTO Parking_Space VALUES (21 , 'L1', 'Charging', 'False');
+INSERT INTO Parking_Space VALUES (22 , 'L2', 'Small', 'False');
+INSERT INTO Parking_Space VALUES (23 , 'L3', 'Handicap', 'False');
+INSERT INTO Parking_Space VALUES (24 , 'L1', 'Small', 'False');
+INSERT INTO Parking_Space VALUES (25 , 'L2', 'Charging', 'False');
 
 INSERT INTO Customer (Customer_ID, License_Plate) values ('C1', 'AB123C');
 INSERT INTO Customer (Customer_ID, License_Plate) values ('C2', 'DE456F');

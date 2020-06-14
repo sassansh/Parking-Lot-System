@@ -1,10 +1,11 @@
 <?php include_once 'config/init.php' ?>
 
-<?php $template = new Template('templates/rateTemplate.php');
+<?php 
+$rate = new Rate;
+$template = new Template('templates/rateTemplate.php');
 $template -> title = 'Rates';
 
-$rate = new Rate;
-
-$template -> rates = $rate->getRatesForLot('L3', 'Day_Rate');
+$template -> rateType = isset($_GET['rate']) ? $_GET['rate'] : null;
+$template -> rates = $rate->getRatesForLot('L3', $template->rateType);
 
 echo $template;

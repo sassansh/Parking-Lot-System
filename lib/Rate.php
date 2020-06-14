@@ -26,8 +26,10 @@ class Rate{
             FROM Rate
             JOIN Parking_Space ON Parking_Space.Space_Type = Rate.Rate_Type
             JOIN Parking_Lot ON Parking_Lot.Lot_ID = Parking_Space.Lot_ID
-            WHERE Parking_Lot.Lot_ID = '$lotID';
+            WHERE Parking_Lot.Lot_ID = :lotID;
         ");
+
+        $this->db->bind(':lotID', $lotID);
 
         // ASSIGN RESULT SET
         $results = $this->db->resultSet();

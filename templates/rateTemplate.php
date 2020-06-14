@@ -9,7 +9,7 @@
         </select>
     </div>
     <div class="form-group">
-        <label>Choose Rate Type</label>
+        <label>Choose Rate</label>
         <select name="rate" class="form-control">
             <option value="0"> </option>
             <option value="Hourly_Rate">Hourly Rate</option>
@@ -17,7 +17,7 @@
             <option value="Monthly_Rate">Monthly Rate</option>
         </select>
     </div>
-    <button type="submit" class="btn btn-primary">Find Rate</button>
+    <button type="submit" class="btn btn-primary">Find Rates</button>
 </form>
 <form>
 
@@ -26,11 +26,11 @@
 </form>
 </div>
 
-<div class="rate-table">
-    <table class="table">
+<div>
+    <table class="table rate-table">
         <tr>
             <th>Rate Type</th>
-            <th><?php echo $rateType; ?></th>
+            <th><?php echo str_replace('_', ' ', $rateType) ; ?></th>
         </tr>
         <?php foreach ($rates as $rate) : ?>
             <tr>

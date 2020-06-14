@@ -1,5 +1,6 @@
 <?php
-class ParkingSpace{
+class ParkingSpace
+{
     private $db;
 
     public function __construct()
@@ -8,7 +9,8 @@ class ParkingSpace{
     }
 
     // GET ALL SPACES
-    public function getAllSpaces(){
+    public function getAllSpaces()
+    {
         $this->db->query("
             SELECT * 
             FROM parking_space;
@@ -20,7 +22,8 @@ class ParkingSpace{
     }
 
     // GET ALL OPEN SPACES
-    public function getAllOpenSpaces($lotID){
+    public function getAllOpenSpaces($lotID)
+    {
         $this->db->query("
             SELECT COUNT(Is_Occupied) AS NumberOfOpenSpots
             FROM parking_space;
@@ -33,7 +36,8 @@ class ParkingSpace{
     }
 
     // GET SPACE BY LOT_ID AND SPACE_TYPE
-    public function getSpaceByLotidAndSpacetype($lotID, $spaceType) {
+    public function getSpaceByLotidAndSpacetype($lotID, $spaceType)
+    {
         $this->db->query("
             SELECT Lot_ID, Space_ID
             FROM parking_space;
@@ -46,19 +50,21 @@ class ParkingSpace{
     }
 
     // INSERT A SPACE WITH LOT_ID AND SPACE_TYPE
-    public function insertSpace($data) {
+    public function insertSpace($data)
+    {
         //INSERT QUERY
         $this->db->query("
             INSERT INTO parking_space(Lot_ID, Space_Type)
-            VALUES(:Lot_ID, :Space_Type)");
+            VALUES(:Lot_ID, :Space_Type);
+        ");
         //Bind Data
         $this->db->bind(':Lot_ID', $data['Lot_ID']);
         $this->db->bind(':Space_Type', $data['Space_Type']);
         //EXECUTE
-        if($this->db->execute()){
+        if ($this->db->execute()) {
             return true;
-        }else {
-                return false;
-            }
+        } else {
+            return false;
+        }
     }
 }

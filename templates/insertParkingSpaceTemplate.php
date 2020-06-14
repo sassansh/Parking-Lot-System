@@ -9,12 +9,11 @@
             <label>Space Type</label>
             <select name="Space_Type" class="form-control">
                 <option value="0">Choose Space Type </option>
-                <option value="Space_Type">Small</option>
-                <option value="Space_Type">Handicap</option>
-                <option value="Space_Type">Charging</option>
+                <option value="Small">Small</option>
+                <option value="Handicap">Handicap</option>
+                <option value="Charging">Charging</option>
             </select>
         </div>
-
         <button type="submit" class="btn btn-primary">Insert Parking Space</button>
     </form>
 

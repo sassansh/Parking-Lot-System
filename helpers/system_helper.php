@@ -35,9 +35,9 @@ function displayMessage() {
             $message_type = $_SESSION['message_type'];
             // CREATE OUTPUT
             if ($message_type == 'error') {
-                echo '<div class="alert alert-danger">' .$message. 'div>';
+                echo '<div class="alert alert-danger">' .$message. '</div>';
             } else {
-                echo '<div class="alert alert-succuss">' .$message. 'div>';
+                echo '<div class="alert alert-succuss">' .$message. '</div>';
             }
         }
         // UNSET MESSAGE
@@ -47,3 +47,9 @@ function displayMessage() {
         echo '';
     }
 }
+
+function console_log( $data ){
+    echo '<script>';
+    echo 'console.log('. json_encode( $data ) .')';
+    echo '</script>';
+  }

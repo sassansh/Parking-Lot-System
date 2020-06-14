@@ -53,12 +53,12 @@ class Rate{
             }
         }
 
-    // DELETE PASS HOLDER
-    public function delete($id){
-        // DELTE QUERY
+    // DELETE RATE 
+    public function delete($rate_type){
+        // DELETE QUERY
         $this->db->query("
-            DELETE FROM Pass_Holder
-            WHERE Customer_ID = '$id';
+            DELETE FROM Rate
+            WHERE Rate.Rate_Type = '$rate_type';
         ");
 
         //EXECUTE

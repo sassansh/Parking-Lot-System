@@ -51,7 +51,11 @@ class Database {
     }
 
     public function execute() {
-        return $this->stmt->execute();
+        try { 
+            return $this->stmt->execute();
+        } catch (PDOException $e) { 
+            $this->error = $e->getMessage(); // this is not working
+        }
     }
 
     // RETURN ALL RECORDS
@@ -64,5 +68,9 @@ class Database {
     public function single(){
         $this->execute();
         return $this->stmt->fetch(PDO::FETCH_OBJ);
+    }
+
+    public function errorInfo() {
+        return $this->error; // I don't think this is working as well
     }
 }

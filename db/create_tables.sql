@@ -101,19 +101,12 @@ CREATE TABLE Fine
     Fine_ID CHAR(255) PRIMARY KEY,
     Officer_ID CHAR(255) NOT NULL,
     Customer_ID CHAR(255) NOT NULL,
+    Fine_Type CHAR(255) NOT NULL,
     Issue_Date_Time DATETIME NOT NULL,
     Must_Be_Paid_By_Date DATETIME NOT NULL,
     Date_Time_Paid_On DATETIME,
     FOREIGN KEY (Officer_ID) REFERENCES Officer(Officer_ID),
-    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID)
-);
-
-CREATE TABLE Fine_ID_Fine_Type
-(
-    Fine_ID CHAR(255),
-    Fine_Type CHAR(255),
-    PRIMARY KEY (Fine_ID, Fine_Type),
-    FOREIGN KEY (Fine_ID) REFERENCES Fine(Fine_ID) ON DELETE CASCADE,
+    FOREIGN KEY (Customer_ID) REFERENCES Customer(Customer_ID),
     FOREIGN KEY (Fine_Type) REFERENCES Fine_Type_Cost(Fine_Type)
 );
 

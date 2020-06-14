@@ -78,17 +78,11 @@ INSERT INTO Fine_Type_Cost VALUES ('Parking In Handicap Space', 250.00);
 INSERT INTO Fine_Type_Cost VALUES ('Parking In Emergency Vehicle Space', 500.00);
 INSERT INTO Fine_Type_Cost VALUES ('No Payment', 100.00);
 
-INSERT INTO Fine VALUES ('F1', 'O1', 'C1', '2020-05-29 07:00:00', '2020-06-05', '2020-06-03 18:15:00');
-INSERT INTO Fine VALUES ('F2', 'O1', 'C5', '2020-05-29 12:00:00', '2020-06-05', null);
-INSERT INTO Fine VALUES ('F3', 'O2', 'C7', '2020-06-01 15:03:00', '2020-06-08', null);
-INSERT INTO Fine VALUES ('F4', 'O3', 'C8', '2020-06-09 19:00:00', '2020-06-16', '2020-06-10 13:00:00');
-INSERT INTO Fine VALUES ('F5', 'O5', 'C10', '2020-06-09 20:13:00', '2020-06-16', null);
-
-INSERT INTO Fine_ID_Fine_Type VALUES  ('F1', 'Parking In Handicap Space');
-INSERT INTO Fine_ID_Fine_Type VALUES  ('F2', 'Over Time Limit ');
-INSERT INTO Fine_ID_Fine_Type VALUES  ('F3', 'Over Time Limit ');
-INSERT INTO Fine_ID_Fine_Type VALUES  ('F4', 'Over Time Limit ');
-INSERT INTO Fine_ID_Fine_Type VALUES  ('F5', 'Parking In Emergency Vehicle Space');
+INSERT INTO Fine VALUES ('F1', 'O1', 'C1', 'Parking In Handicap Space', '2020-05-29 07:00:00', '2020-06-05', '2020-06-03 18:15:00');
+INSERT INTO Fine VALUES ('F2', 'O1', 'C5', 'Over Time Limit', '2020-05-29 12:00:00', '2020-06-05', null);
+INSERT INTO Fine VALUES ('F3', 'O2', 'C7', 'Over Time Limit', '2020-06-01 15:03:00', '2020-06-08', null);
+INSERT INTO Fine VALUES ('F4', 'O3', 'C8', 'Over Time Limit', '2020-06-09 19:00:00', '2020-06-16', '2020-06-10 13:00:00');
+INSERT INTO Fine VALUES ('F5', 'O5', 'C10', 'Parking In Emergency Vehicle Space', '2020-06-09 20:13:00', '2020-06-16', null);
 
 INSERT INTO Patrols VALUES ('O1', 'L1');
 INSERT INTO Patrols VALUES ('O2', 'L2');

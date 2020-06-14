@@ -36,6 +36,23 @@ class Rate{
         return $results;
     }
 
+        // UPDATE RATE
+        public function update($rate_type, $hdm_price, $new_rate){
+            // UPDATE QUERY
+            $this->db->query("
+                UPDATE Rate
+                SET $hdm_price = $new_rate
+                WHERE Rate.Rate_Type = '$rate_type';
+            ");
+    
+            //EXECUTE
+            if($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
     // DELETE PASS HOLDER
     public function delete($id){
         // DELTE QUERY

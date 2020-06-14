@@ -1,5 +1,5 @@
 <?php
-class ParkingPass{
+class PassHolder{
     private $db;
 
     public function __construct()

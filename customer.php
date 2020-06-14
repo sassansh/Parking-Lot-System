@@ -1,7 +1,7 @@
 <?php include_once 'config/init.php' ?>
 <?php 
 $customer = new Customer;
-$parkingPass = new ParkingPass;
+$parkingPass = new PassHolder;
 
 $template = new Template('templates/customer-pp.php');
 $template -> title = 'ParkingPass';

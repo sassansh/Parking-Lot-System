@@ -45,4 +45,20 @@ class ParkingSpace{
         return $results;
     }
 
+    // INSERT A SPACE WITH LOT_ID AND SPACE_TYPE
+    public function insertSpace($data) {
+        //INSERT QUERY
+        $this->db->query("
+            INSERT INTO parking_space(Lot_ID, Space_Type)
+            VALUES(:Lot_ID, :Space_Type)");
+        //Bind Data
+        $this->db->bind(':Lot_ID', $data['Lot_ID']);
+        $this->db->bind(':Space_Type', $data['Space_Type']);
+        //EXECUTE
+        if($this->db->execute()){
+            return true;
+        }else {
+                return false;
+            }
+    }
 }

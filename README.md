@@ -1,5 +1,6 @@
+<p align="center">
 ![Parking Lot Banner](banner.png)
-
+</p>
 # Parking Lot System
 
 > A parking lot database management system for both employees and customers.

@@ -14,7 +14,7 @@
                 <option value="Charging">Charging</option>
             </select>
         </div>
-        <button type="submit" class="btn btn-primary">Insert Parking Space</button>
+        <input type="submit" name="submit" class="btn btn-primary" value="Insert Parking Space">
     </form>
 
 

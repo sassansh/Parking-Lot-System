@@ -6,6 +6,7 @@ $template = new Template('templates/insertParkingSpaceTemplate.php');
 $template -> title = 'Insert a space';
 
 if(isset($_POST['submit'])){
+    
     //Create Array
     $data = array();
     $data['Lot_ID'] = $_POST['Lot_ID'];
@@ -18,5 +19,6 @@ if(isset($_POST['submit'])){
     }
 
 }
+
 
 echo $template;

@@ -3,17 +3,19 @@
 <div class="form-group">
         <label>Choose Lot ID</label>
         <select name="lotID" class="form-control">
-            <option value="0"> </option>
-            <option value="L3">L3</option>
+            <option value="0">Choose a Lot</option>
+            <?php foreach ($parkingLots as $lot) : ?>
+                <option value="<?php echo $lot->Lot_ID; ?>"><?php echo $lot->Lot_ID; ?></option>
+            <?php endforeach; ?>
         </select>
     </div>
     <div class="form-group">
         <label>Choose Rate</label>
         <select name="rate" class="form-control">
-            <option value="0"> </option>
-            <option value="Hourly_Rate">Hourly Rate</option>
-            <option value="Day_Rate">Day Rate</option>
-            <option value="Monthly_Rate">Monthly Rate</option>
+            <option value="0">Choose a Rate</option>
+            <?php foreach ($allRates as $rate) : ?>
+                <option value="<?php echo $rate->Rate_Type; ?>"><?php echo $rate->Rate_Type; ?></option>
+            <?php endforeach; ?>
         </select>
     </div>
     <button type="submit" class="btn btn-primary">Find Rates</button>
@@ -28,7 +30,7 @@
             <th>Rate Type</th>
             <th><?php echo str_replace('_', ' ', $rateType) ; ?></th>
         </tr>
-        <?php foreach ($rates as $rate) : ?>
+        <?php foreach ($selectedRates as $rate) : ?>
             <tr>
                 <td><?php echo $rate->Rate_Type; ?></td>
                 <td><?php echo $rate->Rate; ?></td>

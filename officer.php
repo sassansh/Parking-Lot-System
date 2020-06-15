@@ -8,7 +8,7 @@ $template -> title = 'Officers';
 $template -> show = isset($_GET['show']) ? $_GET['show'] : null;
 
 
-if(($template -> show) == 'Show Officers Patrolling All Lots'){
+if(($template -> show) == 'allLotOfficers'){
     $template -> officers = $officer->getAllOfficersPatrollingAllLots();
 } else {
     $template -> officers = $officer->getAllOfficers();

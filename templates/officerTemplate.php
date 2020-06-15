@@ -2,13 +2,13 @@
 <h1>Officers</h1>
 
 <?php
-if($show == 'Show Officers Patrolling All Lots'){
+if($show == 'allLotOfficers'){
     echo '<form method="GET" action="officer.php">
-    <input name="show" type="submit" id="show" class="btn btn-secondary" value="Show All Officers">
+    <button name="show" type="submit" id="show" class="btn btn-secondary" value="allOfficers">Show All Officers</button>
 </form>
 <br>
 <form method="GET" action="officer.php">
-    <input name="show" type="submit" id="show" class="btn btn-primary" value="Show Officers Patrolling All Lots">
+    <button name="show" type="submit" id="show" class="btn btn-primary" value="Show Officers Patrolling All Lots">Show Officers Patrolling All Lots</button>
 </form>
 <br>
 <h5>Currently showing officers that patrol all lots:</h5>
@@ -16,11 +16,11 @@ if($show == 'Show Officers Patrolling All Lots'){
 ';
 } else {
     echo '<form method="GET" action="officer.php">
-    <input name="show" type="submit" id="show" class="btn btn-primary" value="Show All Officers">
+    <button name="show" type="submit" id="show" class="btn btn-primary" value="allOfficers">Show All Officers</button>
 </form>
 <br>
 <form method="GET" action="officer.php">
-    <input name="show" type="submit" id="show" class="btn btn-secondary" value="Show Officers Patrolling All Lots">
+<button name="show" type="submit" id="show" class="btn btn-secondary" value="allLotOfficers">Show Officers Patrolling All Lots</button>
 </form>
 <br>
 <h5>Currently showing all Officers:</h5>

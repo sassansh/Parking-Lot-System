@@ -7,7 +7,9 @@ $template -> title = 'ParkingSpaces';
 
 $template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
 
-$template -> show = isset($_GET['show']) ? $_GET['show'] : null;
 
-$template -> openSpaces = $parkingspace->getAllOpenSpaces('L1');
+$template -> show = isset($_GET['show']) ? $_GET['show'] : null;
+$lotID = isset($_GET['lotID']) ? $_GET['lotID'] : null;
+$template -> openSpaces = $parkingspace->getAllOpenSpaces($lotID);
+
 echo $template;

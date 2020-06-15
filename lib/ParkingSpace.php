@@ -59,7 +59,7 @@ class ParkingSpace
         $this->db->bind(':Lot_ID', $lotID);
 
         // ASSIGN RESULT SET
-        $results = $this->db->resultSet();
+        $results = $this->db->single();
         return $results;
     }
 

@@ -90,8 +90,16 @@ INSERT INTO Fine VALUES ('F4', 'O3', 'C8', 'Over Time Limit', '2020-06-09 19:00:
 INSERT INTO Fine VALUES ('F5', 'O5', 'C10', 'Parking In Emergency Vehicle Space', '2020-06-09 20:13:00', '2020-06-16', null);
 
 INSERT INTO Patrols VALUES ('O1', 'L1');
+INSERT INTO Patrols VALUES ('O1', 'L2');
+INSERT INTO Patrols VALUES ('O1', 'L3');
+INSERT INTO Patrols VALUES ('O1', 'L4');
+INSERT INTO Patrols VALUES ('O1', 'L5');
 INSERT INTO Patrols VALUES ('O2', 'L2');
+INSERT INTO Patrols VALUES ('O3', 'L1');
 INSERT INTO Patrols VALUES ('O3', 'L2');
+INSERT INTO Patrols VALUES ('O3', 'L3');
+INSERT INTO Patrols VALUES ('O3', 'L4');
+INSERT INTO Patrols VALUES ('O3', 'L5');
 INSERT INTO Patrols VALUES ('O4', 'L4');
 INSERT INTO Patrols VALUES ('O5', 'L5');
 

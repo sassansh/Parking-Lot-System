@@ -10,6 +10,6 @@ $template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
 
 $template -> lotID = isset($_GET['lotID']) ? $_GET['lotID'] : null;
 $template -> spaceType = isset($_GET['spaceType']) ? $_GET['spaceType'] : null;
-$template -> spaces = $parkingspace->getSpaceByLotidAndSpacetype($template->lotID, $template->spaceType);
+$template -> spaces2 = $parkingspace->getSpaceByLotidAndSpacetype($template->lotID, $template->spaceType);
 
 echo $template;

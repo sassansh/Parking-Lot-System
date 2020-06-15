@@ -52,9 +52,11 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT COUNT(Is_Occupied) AS NumberOfOpenSpots
-            FROM parking_space;
-            WHERE parking_space.Lot_ID = $lotID AND parking_space.Is_Occupied = 'False';
+            FROM parking_space
+            WHERE parking_space.Lot_ID = :Lot_ID AND parking_space.Is_Occupied = 'False';
         ");
+
+        $this->db->bind(':Lot_ID', $lotID);
 
         // ASSIGN RESULT SET
         $results = $this->db->resultSet();
@@ -66,9 +68,12 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT Lot_ID, Space_ID
-            FROM parking_space;
-            WHERE parking_space.Lot_ID = $lotID AND parking_space.Space_Type = $spaceType;
+            FROM parking_space
+            WHERE parking_space.Lot_ID = :Lot_ID AND parking_space.Space_Type = :Space_Type;
+
         ");
+        $this->db->bind(':Lot_ID', $lotID);
+        $this->db->bind(':Space_Type', $spaceType);
 
         // ASSIGN RESULT SET
         $results = $this->db->resultSet();

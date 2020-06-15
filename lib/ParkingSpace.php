@@ -47,22 +47,6 @@ class ParkingSpace
         return $results;
     }
 
-    // GET ALL OPEN SPACES
-    public function getAllOpenSpaces($lotID)
-    {
-        $this->db->query("
-            SELECT COUNT(Is_Occupied) AS NumberOfOpenSpots
-            FROM parking_space
-            WHERE parking_space.Lot_ID = :Lot_ID AND parking_space.Is_Occupied = 'False';
-        ");
-
-        $this->db->bind(':Lot_ID', $lotID);
-
-        // ASSIGN RESULT SET
-        $results = $this->db->single();
-        return $results;
-    }
-
     // GET SPACE BY LOT_ID AND SPACE_TYPE
     public function getSpaceByLotidAndSpacetype($lotID, $spaceType)
     {

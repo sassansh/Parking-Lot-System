@@ -37,6 +37,19 @@ class Officer{
         return $results;
     }
 
+     // COUNT ALL OFFICERS
+     public function getCountOfOfficers()
+     {
+         $this->db->query("
+             SELECT COUNT(Officer_ID) AS NumberOfOfficers
+             FROM officer;
+         ");
+ 
+         // ASSIGN RESULT SET
+         $results = $this->db->single();
+         return $results;
+     }
+
     // DELETE OFFICER
     public function delete($id){
         // DELETE QUERY

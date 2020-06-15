@@ -1,4 +1,4 @@
-![Parking Lot Banner](banner.png)
+![Parking Lot Banner](banner.png =250x120)
 
 # Parking Lot System
 
@@ -12,7 +12,7 @@
 
 ---
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Team](#team)

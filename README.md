@@ -1,4 +1,4 @@
-![Parking Lot Banner|250x120](banner.png)
+![Parking Lot Banner](banner.png)
 
 # Parking Lot System
 

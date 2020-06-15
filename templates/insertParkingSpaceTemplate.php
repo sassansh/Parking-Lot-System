@@ -1,4 +1,6 @@
 <?php include 'inc/header.php'; ?>
+<?php include 'inc/sidebar.php'; ?>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
     <h2 class="page-header">Insert a Parking Space</h2>
     <form method="post" action="insertparkingspace.php">
         <div class="form-group">
@@ -21,6 +23,6 @@
         </div>
         <input type="submit" name="submit" class="btn btn-primary" value="Insert Parking Space">
     </form>
-
+    </main>
 
 <?php include 'inc/footer.php'; ?>

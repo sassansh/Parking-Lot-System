@@ -21,6 +21,32 @@ class ParkingSpace
         return $results;
     }
 
+    // GET ALL DISTINCT LOT_IDS
+
+    public function getAllDistinctLotIDs()
+    {
+        $this->db->query("
+            SELECT DISTINCT Lot_ID
+            FROM parking_space;
+        ");
+
+        // ASSIGN RESULT SET
+        $results = $this->db->resultSet();
+        return $results;
+    }
+    // GET ALL DISTINCT SPACE_TYPES
+    public function getAllDistinctSpaceTypes()
+    {
+        $this->db->query("
+            SELECT DISTINCT Space_Type
+            FROM parking_space;
+        ");
+
+        // ASSIGN RESULT SET
+        $results = $this->db->resultSet();
+        return $results;
+    }
+
     // GET ALL OPEN SPACES
     public function getAllOpenSpaces($lotID)
     {

@@ -3,7 +3,7 @@
 <?php
 $parkingspace = new ParkingSpace;
 $template = new Template('templates/insertParkingSpaceTemplate.php');
-$template -> title = 'Insert a space';
+$template -> title = 'ParkingSpaces';
 
 if(isset($_POST['submit'])){
     
@@ -19,6 +19,7 @@ if(isset($_POST['submit'])){
     }
 
 }
-
+$template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
+$template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
 
 echo $template;

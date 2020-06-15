@@ -1,6 +1,7 @@
 <p align="center">
 <img src="https://i.ibb.co/y43rRbY/banner.png" width="508" height="250" alt="Parking Lot Banner"><br/>
 </p>
+
 # Parking Lot System
 
 > A parking lot database management system for both employees and customers.

@@ -36,12 +36,29 @@ class Rate{
         return $results;
     }
 
-    // DELETE PASS HOLDER
-    public function delete($id){
-        // DELTE QUERY
+        // UPDATE RATE
+        public function update($rate_type, $hdm_price, $new_rate){
+            // UPDATE QUERY
+            $this->db->query("
+                UPDATE Rate
+                SET $hdm_price = $new_rate
+                WHERE Rate.Rate_Type = '$rate_type';
+            ");
+    
+            //EXECUTE
+            if($this->db->execute()){
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+    // DELETE RATE 
+    public function delete($rate_type){
+        // DELETE QUERY
         $this->db->query("
-            DELETE FROM Pass_Holder
-            WHERE Customer_ID = '$id';
+            DELETE FROM Rate
+            WHERE Rate.Rate_Type = '$rate_type';
         ");
 
         //EXECUTE

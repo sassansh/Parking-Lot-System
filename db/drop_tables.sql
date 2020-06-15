@@ -1,7 +1,6 @@
 drop table Parking_Pass;
 drop table Parking_Slip;
 drop table Patrols;
-drop table Fine_ID_Fine_Type;
 drop table Fine;
 drop table Fine_Type_Cost;
 drop table Officer;

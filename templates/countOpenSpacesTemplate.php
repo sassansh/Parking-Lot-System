@@ -8,7 +8,7 @@
             <select name="Lot_ID" class="form-control">
                 <option value="0">Select Lot</option>
                 <?php foreach($parkingspaces as $parkingspace): ?>
-                    <option value="<?php echo $parkingspace->Lot_ID; ?>" ><?php echo $parkingspace->Lot_ID; ?></option>
+                    <option name="lotID" value="<?php echo $parkingspace->Lot_ID; ?>" ><?php echo $parkingspace->Lot_ID; ?></option>
                 <?php endforeach; ?>
                 </select>
         </div>
@@ -16,7 +16,17 @@
     </form>
 
 
-
-
+    <div>
+    <table class="table">
+        <tr>
+            <th>Open Spaces</th>
+        </tr>
+            <tr>
+                <td><?php print_r($openSpaces); ?></td>
+            </tr>
+    </table>
+</div>
 
 <?php include 'inc/footer.php'; ?>
+
+

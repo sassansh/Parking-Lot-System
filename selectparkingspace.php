@@ -5,15 +5,11 @@ $parkingspace = new ParkingSpace;
 $template = new Template('templates/selectParkingSpaceTemplate.php');
 $template -> title = 'Spaces';
 
-if(isset($_POST['update'])) {
-    $rateTypeChange = $_POST['rateTypeChange'];
-    $hdmRateChange = $_POST['hdmRateChange'];
-    $newPrice = $_POST['newPrice'];
-    if($rate->update($rateTypeChange, $hdmRateChange, $newPrice) == true) {
-        redirect('rate.php', $rateTypeChange.'\'s '.str_replace('_', ' ', $hdmRateChange).' Updated to '.$newPrice, 'success');
-    } else {
-        redirect('rate.php', 'Rate Not Updated', 'error');
-    }
-}
+$template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
+$template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
+
+$template -> lotID = isset($_GET['lotID']) ? $_GET['lotID'] : null;
+$template -> spaceType = isset($_GET['spaceType']) ? $_GET['spaceType'] : null;
+$template -> spaces = $parkingspace->getSpaceByLotidAndSpacetype($template->lotID, $template->spaceType);
 
 echo $template;

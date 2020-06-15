@@ -12,6 +12,7 @@ class Rate{
         $this->db->query("
             SELECT * 
             FROM Rate
+            ORDER BY Rate_Type;
         ");
 
         // ASSIGN RESULT SET

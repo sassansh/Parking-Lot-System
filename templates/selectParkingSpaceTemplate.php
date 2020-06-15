@@ -1,12 +1,12 @@
 <?php include 'inc/header.php'; ?>
 
-<form method="GET" action="selectparkingspace.php">
+<form method="post" action="selectparkingspace.php">
 <div class="form-group">
         <label>Choose Lot ID</label>
         <select name="lotID" class="form-control">
                 <option value="0">Select Lot</option>
                 <?php foreach($parkingspaces as $parkingspace): ?>
-                    <option value="<?php echo $parkingspace->Lot_ID; ?>" ><?php echo $parkingspace->Lot_ID; ?></option>
+                    <option value="<?php echo $parkingspace->Lot_ID; ?>" ><?php echo str_replace('_', ' ', $parkingspace->Lot_ID); ?></option>
                 <?php endforeach; ?>
         </select>
     </div>
@@ -15,7 +15,7 @@
         <select name="spaceType" class="form-control">
             <option value="0">Select Space Type</option>
             <?php foreach($spacetypes as $parkingspace): ?>
-                    <option value="<?php echo $parkingspace->Space_Type; ?>" ><?php echo $parkingspace->Space_Type; ?></option>
+                    <option value="<?php echo $parkingspace->Space_Type; ?>" ><?php echo str_replace('_', ' ', $parkingspace->Space_Type); ?></option>
                 <?php endforeach; ?>
         </select>
     </div>

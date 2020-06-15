@@ -8,8 +8,8 @@ $template -> title = 'Spaces';
 $template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
 $template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
 
-$template -> lotID = isset($_GET['lotID']) ? $_GET['lotID'] : null;
-$template -> spaceType = isset($_GET['spaceType']) ? $_GET['spaceType'] : null;
+$template -> lotID = isset($_POST['lotID']) ? $_POST['lotID'] : null;
+$template -> spaceType = isset($_POST['spaceType']) ? $_POST['spaceType'] : null;
 $template -> spaces2 = $parkingspace->getSpaceByLotidAndSpacetype($template->lotID, $template->spaceType);
 
 echo $template;

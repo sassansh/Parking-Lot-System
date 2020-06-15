@@ -11,7 +11,8 @@ class ParkingLot{
     public function getParkingLots(){
         $this->db->query("
             SELECT * 
-            FROM Parking_Lot;
+            FROM Parking_Lot
+            ORDER BY Lot_ID;
         ");
 
         // ASSIGN RESULT SET

@@ -9,9 +9,6 @@ Our Group used this php file for our templates.
 // START SESSION
 session_start();
 
-// CONFIG FILE 
-require_once 'config.php';
-
 // INCLUDE HELPERS
 require_once 'helpers/system_helper.php';
 

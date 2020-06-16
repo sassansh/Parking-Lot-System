@@ -4,12 +4,12 @@
 $rate = new Rate;
 $parkingLot = new ParkingLot;
 $template = new Template('templates/rateTemplate.php');
-$template -> title = 'Rates';
+$template -> title = 'Lot Rates';
 
-$template -> allRates = $rate->getAllRates();
+$template -> allRateColumns = $rate->getAllRateColumns();
 $template -> parkingLots = $parkingLot->getParkingLots();
 $template -> lotID = isset($_GET['lotID']) ? $_GET['lotID'] : null;
-$template -> rateType = isset($_GET['rate']) ? $_GET['rate'] : null;
-$template -> selectedRates = $rate->getRatesForLot($template->lotID, $template->rateType);
+$template -> rateCategory = isset($_GET['rate']) ? $_GET['rate'] : null;
+$template -> selectedRates = $rate->getRatesForLot($template->lotID, $template->rateCategory);
 
 echo $template;

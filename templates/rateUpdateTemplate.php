@@ -33,12 +33,14 @@
 <br>
 <div class="all-rates-table table-responsive">
         <table class="table table-striped table-sm">
+            <thead>
         <tr>
             <th>Rate Type</th>
             <th>Hourly Rate</th>
             <th>Day Rate</th>
             <th>Monthly Rate</th>
         </tr>
+            </thead>
         <?php foreach ($allRates as $rate) : ?>
             <tr>
                 <td><?php echo $rate->Rate_Type; ?></td>

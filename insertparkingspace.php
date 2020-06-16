@@ -2,6 +2,7 @@
 
 <?php
 $parkingspace = new ParkingSpace;
+$rate = new Rate;
 $template = new Template('templates/insertParkingSpaceTemplate.php');
 $template -> title = 'ParkingSpaces';
 
@@ -19,6 +20,7 @@ if(isset($_POST['submit'])){
     }
 
 }
+$template -> allRates = $rate->getAllRates();
 $template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
 $template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
 

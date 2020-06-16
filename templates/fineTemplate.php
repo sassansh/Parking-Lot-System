@@ -22,11 +22,13 @@ if (strlen($licensePlate) > 1) {
 
 <div class="fine-table table-responsive">
         <table class="table table-striped table-sm">
+            <thead>
         <tr>
             <th>Fine ID</th>
             <th>Fine Type</th>
             <th>Fine Cost</th>
         </tr>
+</thead>
         <?php foreach ($fines as $fine): ?>
             <tr>
                 <td><?php echo $fine->Fine_ID; ?></td>

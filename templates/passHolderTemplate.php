@@ -1,6 +1,12 @@
 <?php include 'inc/header.php'; ?>
+<?php include 'inc/sidebar.php'; ?>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Pass Holders</h1>
+    </div>
 <div class="customer-table">
     <table class="table">
+        <thead>
         <tr>
             <th>Customer ID</th>
             <th>First Name</th>
@@ -11,6 +17,7 @@
             <th>Parking Pass ID</th>
             <th>Action</th>
         </tr>
+</thead>
         <?php foreach ($passHolderPasses as $passHolder) : ?>
             <tr>
                 <td><?php echo $passHolder->Customer_ID; ?></td>
@@ -58,5 +65,5 @@
         <?php endforeach; ?>
     </table>
 </div>
-
+        </main>
 <?php include 'inc/footer.php'; ?>

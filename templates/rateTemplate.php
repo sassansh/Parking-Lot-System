@@ -1,4 +1,9 @@
 <?php include 'inc/header.php'; ?>
+<?php include 'inc/sidebar.php'; ?>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Lot Rates</h1>
+    </div>
 <form method="GET" action="rate.php">
 <div class="form-group">
         <label>Choose Lot ID</label>
@@ -20,10 +25,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Find Rates</button>
 </form>
-
-
-</div>
-
+<br>
 <div>
     <table class="table rate-table">
         <tr>
@@ -38,5 +40,5 @@
         <?php endforeach; ?>
     </table>
 </div>
-
+        </main>
 <?php include 'inc/footer.php'; ?>

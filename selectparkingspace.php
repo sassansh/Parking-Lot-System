@@ -1,10 +1,12 @@
 <?php include_once 'config/init.php' ?>
 
 <?php 
+$rate = new Rate;
 $parkingspace = new ParkingSpace;
 $template = new Template('templates/selectParkingSpaceTemplate.php');
 $template -> title = 'Spaces';
 
+$template -> allRates = $rate->getAllRates();
 $template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
 $template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
 

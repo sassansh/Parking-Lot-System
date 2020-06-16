@@ -42,7 +42,7 @@ class Officer{
      {
          $this->db->query("
              SELECT COUNT(Officer_ID) AS NumberOfOfficers
-             FROM officer;
+             FROM Officer;
          ");
  
          // ASSIGN RESULT SET

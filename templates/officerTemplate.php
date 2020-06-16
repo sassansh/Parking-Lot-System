@@ -1,6 +1,9 @@
 <?php include 'inc/header.php'; ?>
-<h1>Officers</h1>
-
+<?php include 'inc/sidebar.php'; ?>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Officers</h1>
+    </div>
 <?php
 if($show == 'allLotOfficers'){
     echo '<form method="GET" action="officer.php">
@@ -31,8 +34,8 @@ if($show == 'allLotOfficers'){
 
 
 
-<div>
-    <table class="table">
+<div class="officer-table table-responsive">
+        <table class="table table-striped table-sm">
         <tr>
             <th>Officer ID</th>
             <th>First Name</th>
@@ -49,5 +52,5 @@ if($show == 'allLotOfficers'){
         <?php endforeach; ?>
     </table>
 </div>
-
+</main>
 <?php include 'inc/footer.php'; ?>

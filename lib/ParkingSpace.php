@@ -13,7 +13,7 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT * 
-            FROM parking_space;
+            FROM Parking_Space;
         ");
 
         // ASSIGN RESULT SET
@@ -27,7 +27,7 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT DISTINCT Lot_ID
-            FROM parking_space;
+            FROM Parking_Space;
         ");
 
         // ASSIGN RESULT SET
@@ -39,7 +39,7 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT DISTINCT Space_Type
-            FROM parking_space;
+            FROM Parking_Space;
         ");
 
         // ASSIGN RESULT SET
@@ -52,8 +52,8 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT Lot_ID, Space_ID
-            FROM parking_space
-            WHERE parking_space.Lot_ID = :Lot_ID AND parking_space.Space_Type = :Space_Type;
+            FROM Parking_Space
+            WHERE Parking_Space.Lot_ID = :Lot_ID AND Parking_Space.Space_Type = :Space_Type;
 
         ");
         $this->db->bind(':Lot_ID', $lotID);
@@ -69,7 +69,7 @@ class ParkingSpace
     {
         //INSERT QUERY
         $this->db->query("
-            INSERT INTO parking_space(Lot_ID, Space_Type)
+            INSERT INTO Parking_Space(Lot_ID, Space_Type)
             VALUES(:Lot_ID, :Space_Type);
         ");
         //Bind Data

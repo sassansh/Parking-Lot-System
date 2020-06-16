@@ -36,12 +36,14 @@ if($show == 'allLotOfficers'){
 
 <div class="officer-table table-responsive">
         <table class="table table-striped table-sm">
+            <thead>
         <tr>
             <th>Officer ID</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Shift</th>
         </tr>
+</thead>
         <?php foreach ($officers as $officer) : ?>
             <tr>
                 <td><?php echo $officer->Officer_ID; ?></td>

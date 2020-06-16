@@ -1,38 +1,40 @@
-<?php include 'inc/header.php'; ?>
-Hello, Officer!<br><br>
-<form method="GET" action="fine.php">
+<?php include 'inc/header.php';?>
+<?php include 'inc/sidebar.php';?>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Fine Lookup</h1>
+    </div>
+
 <div class="form-group">
+<form method="GET" action="fine.php">
         <label>Please enter the License Plate to show all the fines for:</label>
         <input type="text" id="licensePlate" name="licensePlate"><br>
     </div>
     <button type="submit" class="btn btn-primary">Lookup Fines</button>
 </form>
-</div>
-<br>
-<?php 
+<br><br>
+<?php
 
-if(strlen($licensePlate ) > 1){
-    echo 'Here are the fines for <b>'.$licensePlate.'</b><br><br>';
+if (strlen($licensePlate) > 1) {
+    echo 'Here are the fines for <b>' . $licensePlate . '</b><br><br>';
 }
 ?>
 
-
-
-<div>
-    <table class="table">
+<div class="fine-table table-responsive">
+        <table class="table table-striped table-sm">
         <tr>
             <th>Fine ID</th>
             <th>Fine Type</th>
             <th>Fine Cost</th>
         </tr>
-        <?php foreach ($fines as $fine) : ?>
+        <?php foreach ($fines as $fine): ?>
             <tr>
                 <td><?php echo $fine->Fine_ID; ?></td>
                 <td><?php echo $fine->Fine_Type; ?></td>
                 <td><?php echo $fine->Cost; ?></td>
             </tr>
-        <?php endforeach; ?>
+        <?php endforeach;?>
     </table>
 </div>
-
-<?php include 'inc/footer.php'; ?>
+</main>
+<?php include 'inc/footer.php';?>

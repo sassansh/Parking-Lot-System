@@ -6,8 +6,9 @@
     </div>
     <h3>License Plate: <?php echo $customer->License_Plate ?></h3>
     <?php if ($parkingPass && $passHolder) : ?>
+        <br>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Parking Pass">
+            <img class="card-img-top" src="assets/placeholder.jpg" alt="Parking Pass">
             <div class="card-body">
                 <h5 class="card-title">Parking Pass ID # <?php echo $parkingPass->Parking_Pass_ID; ?></h5>
                 <p class="card-text"><b><?php echo $passHolder->Last_Name . ', ' . $passHolder->First_Name; ?></b></p>
@@ -16,7 +17,7 @@
                 <p class="card-text"><b>Expiry Date: </b> <?php echo $parkingPass->Expiry_Date_Time ?></p>
                 <form style="display:inline;" method="POST" action="customer.php">
                     <input type="hidden" name="pass_del_id" value="<?php echo $parkingPass->Parking_Pass_ID ?>">
-                    <input type="submit" class="btn btn-danger" value="Delete">
+                    <input type="submit" class="btn btn-danger" value="Delete Pass">
                 </form>
             </div>
         </div>

@@ -9,7 +9,7 @@
 </form>
 <div class=officer-count>
     <p><?php if ($show == 'Show Count Of Officers') {
-            echo '<br>There are currently <b>'.$officers->NumberOfOfficers.'</b> active officers on duty!<br>';
+            echo '<br>There are currently <b>'.$officers->NumberOfOfficers.'</b> employed officers across the parking lots!<br>';
             echo '<p style="font-size:70px">';
             for ($x = 0; $x < $officers->NumberOfOfficers; $x++) {
                 echo '&#128110;&#8205;&#9794;&#65039';

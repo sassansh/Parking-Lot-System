@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://i.imgur.com/3gTOQiP.png" width="500" height="179" alt="Parking Lot Banner"><br/>
+<img src="https://i.imgur.com/3gTOQiP.png" width="600" height="215" alt="Parking Lot Banner"><br/>
 </p>
 
 # Parking Lot System

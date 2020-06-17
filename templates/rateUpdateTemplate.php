@@ -44,9 +44,9 @@
         <?php foreach ($allRates as $rate) : ?>
             <tr>
                 <td><?php echo $rate->Rate_Type; ?></td>
-                <td><?php echo $rate->Hourly_Rate; ?></td>
-                <td><?php echo $rate->Day_Rate; ?></td>
-                <td><?php echo $rate->Monthly_Rate; ?></td>
+                <td>$<?php echo $rate->Hourly_Rate; ?></td>
+                <td>$<?php echo $rate->Day_Rate; ?></td>
+                <td>$<?php echo $rate->Monthly_Rate; ?></td>
             </tr>
         <?php endforeach; ?>
     </table>

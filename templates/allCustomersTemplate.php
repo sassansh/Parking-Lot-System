@@ -18,10 +18,7 @@
                     <td><?php echo $customer->Customer_ID; ?></td>
                     <td><?php echo $customer->License_Plate; ?></td>
                     <td>
-                        <form style="display:inline;" method="post" action="customer.php">
-                            <input type="hidden" name="del_id" value="<?php echo $customer->Customer_ID ?>">
-                            <input type="submit" class="btn btn-danger" value="Delete">
-                        </form>
+                        <a class="btn btn-primary" href="customer.php?id=<?php echo $customer->Customer_ID; ?>">View</a>
                     </td>
                 </tr>
             <?php endforeach; ?>

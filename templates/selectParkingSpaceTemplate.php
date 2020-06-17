@@ -27,19 +27,21 @@
     </form>
     <br>
     <br>
-    <div>
-        <table class="table">
-            <tr>
-                <th>Lot ID</th>
-                <th>Space ID</th>
-            </tr>
-            <?php foreach ($spaces2 as $parkingspace) : ?>
+    <?php if ($spaces2 && $lotID) : ?>
+        <div>
+            <table class="table">
                 <tr>
-                    <td><?php echo $parkingspace->Lot_ID; ?></td>
-                    <td><?php echo $parkingspace->Space_ID; ?></td>
+                    <th>Lot ID</th>
+                    <th>Space ID</th>
                 </tr>
-            <?php endforeach; ?>
-        </table>
-    </div>
+                <?php foreach ($spaces2 as $parkingspace) : ?>
+                    <tr>
+                        <td><?php echo $parkingspace->Lot_ID; ?></td>
+                        <td><?php echo $parkingspace->Space_ID; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    <?php endif; ?>
 </main>
 <?php include 'inc/footer.php'; ?>

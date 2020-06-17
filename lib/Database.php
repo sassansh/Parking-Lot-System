@@ -1,11 +1,9 @@
-<!-- The source code for this was from the YouTube Tutorial:
-"Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
-https://www.youtube.com/watch?v=LEkjrQMmIK0
-
-Our Group used this class to initialize our database connection and as executing our queries.
--->
-
 <?php
+// The source code for this was from the YouTube Tutorial:
+// "Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
+// https://www.youtube.com/watch?v=LEkjrQMmIK0
+
+// Our Group used this class to initialize our database connection and as executing our queries.
 class Database {
     private $host = 'localhost';
     private $username = 'root';

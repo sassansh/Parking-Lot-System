@@ -26,10 +26,27 @@ class Fine{
             FROM Customer c, Fine f, Fine_Type_Cost fc
             WHERE c.Customer_ID = f.Customer_ID AND 
             f.Fine_Type = fc.Fine_Type AND 
-            c.License_Plate = '$licensePlate';
+            c.License_Plate = :licensePlate;
         ");
 
         $this->db->bind(':licensePlate', $licensePlate);
+
+        // ASSIGN RESULT SET
+        $results = $this->db->resultSet();
+        return $results;
+    }
+
+      // GET ALL PASS HOLDERS AND THEIR PASSES
+      public function getFinesByCustomerID($id){
+        $this->db->query("
+            SELECT *
+            FROM Customer c, Fine f, Fine_Type_Cost fc
+            WHERE c.Customer_ID = f.Customer_ID AND 
+            f.Fine_Type = fc.Fine_Type AND 
+            c.Customer_ID = :id;
+        ");
+
+        $this->db->bind(':id', $id);
 
         // ASSIGN RESULT SET
         $results = $this->db->resultSet();

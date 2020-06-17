@@ -27,24 +27,26 @@
     </form>
     <br>
     <br>
-    <h2 style="<?php if(!$lotID && !$rateCategory) echo 'display:none' ?>">
-        Showing <?php echo str_replace('_', ' ', $rateCategory).'s'; ?> in <?php echo str_replace('_', ' ', $lotID); ?> 
-    </h2>
-    <div class="table-responsive">
-        <table class="table rate-table table table-striped table-sm">
-            <thead>
-                <tr>
-                    <th>Rate Type</th>
-                    <th><?php echo str_replace('_', ' ', $rateCategory); ?></th>
-                </tr>
-            </thead>
-            <?php foreach ($selectedRates as $rate) : ?>
-                <tr>
-                    <td><?php echo $rate->Rate_Type; ?></td>
-                    <td>$<?php echo $rate->RateCat; ?></td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-    </div>
+    <?php if ($rateCategory && $lotID) : ?>
+        <h2>
+            Showing <?php echo str_replace('_', ' ', $rateCategory) . 's'; ?> in <?php echo str_replace('_', ' ', $lotID); ?>
+        </h2>
+        <div class="table-responsive">
+            <table class="table rate-table table table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Rate Type</th>
+                        <th><?php echo str_replace('_', ' ', $rateCategory); ?></th>
+                    </tr>
+                </thead>
+                <?php foreach ($selectedRates as $rate) : ?>
+                    <tr>
+                        <td><?php echo $rate->Rate_Type; ?></td>
+                        <td>$<?php echo $rate->RateCat; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </table>
+        </div>
+    <?php endif; ?>
 </main>
 <?php include 'inc/footer.php'; ?>

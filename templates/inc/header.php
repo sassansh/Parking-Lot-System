@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parking Lot System</title>
+    <title><?php echo $title ?></title>
+    <!-- Import Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- Import Local Styles -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 </head>

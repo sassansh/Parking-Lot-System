@@ -1,11 +1,10 @@
-<!-- The source code for this was from the YouTube Tutorial:
-"Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
-https://www.youtube.com/watch?v=LEkjrQMmIK0
-
-Our Group used these function for our redirects.
--->
-
 <?php
+// The source code for this was from the YouTube Tutorial:
+// "Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
+// https://www.youtube.com/watch?v=LEkjrQMmIK0
+
+// Our Group used these function for our redirects.
+
 //REDIRECT TO PAGE
 function redirect($page = FALSE, $message = NULL, $message_type = NULL) {
     if (is_string($page)) {

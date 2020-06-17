@@ -25,6 +25,23 @@
         </div>
         <input type="submit" name="submit" class="btn btn-primary" value="Insert Parking Space">
     </form>
+    <br>
+    <div>
+        <table class="table">
+            <tr>
+                <th>Lot ID</th>
+                <th>Space ID</th>
+                <th>Space Type</th>
+            </tr>
+            <?php foreach ($spaces2 as $parkingspace) : ?>
+                <tr>
+                    <td><?php echo $parkingspace->Lot_ID; ?></td>
+                    <td><?php echo $parkingspace->Space_ID; ?></td>
+                    <td><?php echo $parkingspace->Space_Type; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
     </main>
 
 <?php include 'inc/footer.php'; ?>

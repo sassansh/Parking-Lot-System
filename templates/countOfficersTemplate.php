@@ -2,7 +2,7 @@
 <?php include 'inc/sidebar.php'; ?>
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
     <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Total Count of Officers</h1>
+        <h1 class="h2">Officers on Patrol</h1>
     </div>
 <form method="post" action="countofficers.php">
     <input type="submit" name="show" class="btn btn-primary" value="Show Count Of Officers">

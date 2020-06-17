@@ -13,7 +13,8 @@ class ParkingSpace
     {
         $this->db->query("
             SELECT * 
-            FROM Parking_Space;
+            FROM Parking_Space
+            ORDER BY LENGTH(Lot_ID), Lot_ID, LENGTH(Space_ID), Space_ID;
         ");
 
         // ASSIGN RESULT SET

@@ -28,7 +28,7 @@ if(isset($_POST['pass_del_id'])) {
 if(isset($_POST['cus_del_id'])) {
     $del_id = $_POST['cus_del_id'];
     if($customer->delete($del_id)) {
-        redirect('customer.php', 'Customer Deleted', 'success');
+        redirect('customers.php', 'Customer Deleted', 'success');
     } else {
         redirect('customer.php?id='.$del_id, 'Customer Not Deleted', 'error');
     }

@@ -26,7 +26,7 @@ class Fine{
             FROM Customer c, Fine f, Fine_Type_Cost fc
             WHERE c.Customer_ID = f.Customer_ID AND 
             f.Fine_Type = fc.Fine_Type AND 
-            c.License_Plate = '$licensePlate';
+            c.License_Plate = :licensePlate;
         ");
 
         $this->db->bind(':licensePlate', $licensePlate);

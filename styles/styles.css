@@ -1,7 +1,5 @@
 .rate-table td, .rate-table th {
     width: 50%;
-<<<<<<< Updated upstream
-=======
 }
 
 .customer-fine-table td, .customer-fine-table th {
@@ -17,5 +15,4 @@
 .active {
     color: #0056b3;
     font-weight: bold;
->>>>>>> Stashed changes
 }

@@ -25,6 +25,7 @@
         </div>
         <input type="submit" name="submit" class="btn btn-primary" value="Insert Parking Space">
     </form>
+    <br>
     <div>
         <table class="table">
             <tr>

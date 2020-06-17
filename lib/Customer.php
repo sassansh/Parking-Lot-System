@@ -11,7 +11,8 @@ class Customer{
     public function getAllCustomers(){
         $this->db->query("
             SELECT * 
-            FROM Customer;
+            FROM Customer
+            ORDER BY LENGTH(Customer_ID), Customer_ID;
         ");
 
         // ASSIGN RESULT SET
@@ -34,14 +35,32 @@ class Customer{
     public function getCustomerByLicensePlate($licensePlate) {
         $this->db->query("
             SELECT * 
-            FROM Customer;
-            WHERE Customer.License_Plate = $licensePlate;
+            FROM Customer
+            WHERE Customer.License_Plate = :licensePlateNum;
         ");
 
+        $this->db->bind(':licensePlateNum', $licensePlate);
+
         // ASSIGN RESULT SET
-        $results = $this->db->resultSet();
+        $results = $this->db->single();
         return $results;
     }
+
+    // GET CUSTOMER BY ID
+    public function getCustomerByID($id) {
+        $this->db->query("
+            SELECT * 
+            FROM Customer
+            WHERE Customer_ID = :id;
+        ");
+
+        $this->db->bind(':id', $id);
+
+        // ASSIGN RESULT SET
+        $results = $this->db->single();
+        return $results;
+    }
+
 
     // DELETE CUSTOMER
     public function delete($id){

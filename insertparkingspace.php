@@ -23,5 +23,6 @@ if(isset($_POST['submit'])){
 $template -> allRates = $rate->getAllRates();
 $template -> parkingspaces = $parkingspace->getAllDistinctLotIDs();
 $template -> spacetypes = $parkingspace->getAllDistinctSpaceTypes();
+$template -> spaces2 = $parkingspace->getAllSpaces();
 
 echo $template;

@@ -17,17 +17,18 @@ $template -> fines = $fine->getFinesByCustomerID($cid);
 
 if(isset($_POST['pass_del_id'])) {
     $pass_del_id = $_POST['pass_del_id'];
+    $id = $_POST['id'];
     if($parkingPass->delete($pass_del_id)) {
-        redirect('customer.php?id='.$cid, 'Parking Pass Deleted', 'success');
+        redirect('customer.php?id='.$id, 'Parking Pass Deleted', 'success');
     } else {
-        redirect('customer.php?id='.$cid, 'Parking Pass Not Deleted', 'error');
+        redirect('customer.php?id='.$id, 'Parking Pass Not Deleted', 'error');
     }
 }
 
 if(isset($_POST['cus_del_id'])) {
     $del_id = $_POST['cus_del_id'];
     if($customer->delete($del_id)) {
-        redirect('customers.php', 'Customer Deleted', 'success');
+        redirect('customer.php', 'Customer Deleted', 'success');
     } else {
         redirect('customer.php?id='.$del_id, 'Customer Not Deleted', 'error');
     }

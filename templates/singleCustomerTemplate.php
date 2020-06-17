@@ -17,6 +17,7 @@
                 <p class="card-text"><b>Expiry Date: </b> <?php echo $parkingPass->Expiry_Date_Time ?></p>
                 <form style="display:inline;" method="POST" action="customer.php">
                     <input type="hidden" name="pass_del_id" value="<?php echo $parkingPass->Parking_Pass_ID ?>">
+                    <input type="hidden" name="id" value="<?php echo $customer->Customer_ID ?>">
                     <input type="submit" class="btn btn-danger" value="Delete Pass">
                 </form>
             </div>

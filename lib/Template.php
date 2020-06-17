@@ -1,11 +1,10 @@
-<!-- The source code for this was from the YouTube Tutorial:
-"Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
-https://www.youtube.com/watch?v=LEkjrQMmIK0
+<?php
+// The source code for this was from the YouTube Tutorial:
+// "Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
+// https://www.youtube.com/watch?v=LEkjrQMmIK0
 
-Our Group used this class to create our template pages.
--->
-
-<?php class Template{
+// Our Group used this class to create our template pages.
+class Template{
     // PATH TO TEMPLATE
     protected $template;
 

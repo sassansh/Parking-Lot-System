@@ -11,8 +11,7 @@ class PassHolder{
     public function getAllPassHolder(){
         $this->db->query("
             SELECT * 
-            FROM Pass_Holder
-            JOIN Customer ON Pass_Holder.Customer_ID = Customer.Customer_ID;
+            FROM Pass_Holder;
         ");
 
         // ASSIGN RESULT SET
@@ -21,12 +20,11 @@ class PassHolder{
     }
 
     // GET ALL PASS HOLDERS AND THEIR PASSES
-    public function getAllPassHolderAndPasses(){
+    public function getAllPassHolders(){
         $this->db->query("
             SELECT * 
             FROM Pass_Holder
-            JOIN Customer ON Pass_Holder.Customer_ID = Customer.Customer_ID
-            JOIN Parking_Pass ON Parking_Pass.Customer_ID = Pass_Holder.Customer_ID;
+            ORDER BY LENGTH(Customer_ID), Customer_ID;
         ");
 
         // ASSIGN RESULT SET
@@ -34,13 +32,30 @@ class PassHolder{
         return $results;
     }
 
+    public function getPassHolderByID($id){
+        $this->db->query("
+            SELECT * 
+            FROM Pass_Holder
+            WHERE Customer_ID = :id;
+        ");
+
+        $this->db->bind(':id', $id);
+
+        // ASSIGN RESULT SET
+        $results = $this->db->single();
+        return $results;
+    }
+
+
     // DELETE PASS HOLDER
     public function delete($id){
         // DELTE QUERY
         $this->db->query("
-            DELETE FROM Customer
-            WHERE Customer_ID = '$id';
+            DELETE FROM Pass_Holder
+            WHERE Customer_ID = :id;
         ");
+
+        $this->db->bind(':id', $id);
 
         //EXECUTE
         if($this->db->execute()){

@@ -207,9 +207,11 @@ INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Dat
 INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E7', 'Walter', 'White', '2013-12-01', 'ACTIVE'); 
 INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E8', 'Shannon', 'Fitzgerald', '2009-02-24', 'ACTIVE'); 
 INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E9', 'Bart', 'Simpson', '2016-05-05', 'ACTIVE'); 
-INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E10', 'Lisa', 'Samani', '2006-06-07', 'ACTIVE'); 
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E10', 'Lisa', 'Samani', '2006-06-07', 'ACTIVE');
+INSERT INTO Parking_Lot_Employee (Employee_ID, First_Name, Last_Name, Hiring_Date, Employment_Status) values ('E11', 'John', 'Smith', '2005-06-07', 'ACTIVE'); 
 
-INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E10', 'M5', null);
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E11', 'M6', null);
+INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E10', 'M5', 'M6');
 INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E8', 'M3', 'M5');
 INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E7', 'M2', 'M3');
 INSERT INTO Manager (Employee_ID, Manager_ID, Managed_By_ID) VALUES ('E9', 'M4', 'M2');
@@ -226,6 +228,7 @@ INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M2', 'Re
 INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M3', 'Assistant Director');
 INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M4', 'Lot Manager');
 INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M5', 'Director');
+INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M6', 'Executive');
 
 INSERT INTO Officer VALUES ('E1', 'O1', 'Day','M1');
 INSERT INTO Officer VALUES ('E2', 'O2', 'Day', 'M1');

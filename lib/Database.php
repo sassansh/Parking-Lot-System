@@ -3,7 +3,7 @@
 // "Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
 // https://www.youtube.com/watch?v=LEkjrQMmIK0
 
-// Our Group used this class to initialize our database connection and as executing our queries.
+// Our Group used this class to initialize our database connection and to execute our queries.
 class Database {
     private $host = 'localhost';
     private $username = 'root';

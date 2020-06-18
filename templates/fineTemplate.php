@@ -31,7 +31,7 @@
                     <tr>
                         <td><?php echo $fine->Fine_ID; ?></td>
                         <td><?php echo $fine->Fine_Type; ?></td>
-                        <td><?php echo $fine->Cost; ?></td>
+                        <td>$<?php echo $fine->Cost; ?></td>
                     </tr>
                 <?php endforeach; ?>
             </table>

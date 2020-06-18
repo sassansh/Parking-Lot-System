@@ -5,6 +5,6 @@ $parkingPass = new ParkingPass;
 $template = new Template('templates/parkingPassTemplate.php');
 $template -> title = 'Parking Pass';
 
-$template -> parkingPasses = $parkingPass->getAllParkingPasses();
+$template -> parkingPasses = $parkingPass->getAllParkingPassesAndLinkedPassHolder();
 
 echo $template;

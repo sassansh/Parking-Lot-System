@@ -19,6 +19,20 @@ class ParkingPass{
         return $results;
     }
 
+    // GET ALL PARKING PASSES AND LINKED PASSHOLDER NAME
+    public function getAllParkingPassesAndLinkedPassHolder(){
+        $this->db->query("
+            SELECT Parking_Pass_ID, First_Name, Last_Name, Issue_Date_Time, Expiry_Date_Time, Lot_ID, Space_ID
+            FROM Parking_Pass
+            JOIN Pass_Holder ON Pass_Holder.Customer_ID = Parking_Pass.Customer_ID;
+        ");
+
+        // ASSIGN RESULT SET
+        $results = $this->db->resultSet();
+        return $results;
+    }
+
+
     public function getParkingPassByCustomerID($id){
         $this->db->query("
             SELECT * 

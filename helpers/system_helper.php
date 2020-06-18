@@ -3,7 +3,7 @@
 // "Projects In PHP | Creating A Job Lister Website From Scratch | Eduonix"
 // https://www.youtube.com/watch?v=LEkjrQMmIK0
 
-// Our Group used these function for our redirects.
+// Our Group used these function for our redirects as well as the banner popup.
 
 //REDIRECT TO PAGE
 function redirect($page = FALSE, $message = NULL, $message_type = NULL) {
@@ -53,9 +53,3 @@ function displayMessage() {
         echo '';
     }
 }
-
-function console_log( $data ){
-    echo '<script>';
-    echo 'console.log('. json_encode( $data ) .')';
-    echo '</script>';
-  }

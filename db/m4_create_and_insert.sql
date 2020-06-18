@@ -209,6 +209,7 @@ INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Lot Manager', 50000);
 INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Regional Manager', 70000);
 INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Assistant Director', 80000);
 INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Director', 90000);
+INSERT INTO Manager_Salary (Manager_Type, Salary) VALUES ('Lot Attendant', 40000);
 
 INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M1', 'Lot Manager');
 INSERT INTO Manager_ID_Manager_Type (Manager_ID, Manager_Type) VALUES ('M2', 'Regional Manager');

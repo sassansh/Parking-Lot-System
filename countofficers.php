@@ -5,8 +5,12 @@ $officer = new Officer;
 $template = new Template('templates/countOfficersTemplate.php');
 $template -> title = 'Officers';
 
+$template -> officers1 = $officer->getShifts();
+
 $template -> show = isset($_POST['show']) ? $_POST['show'] : null;
-$template -> officers = $officer->getCountOfOfficers();
+
+$template -> shift = isset($_POST['Shift']) ? $_POST['Shift'] : null;
+$template -> officers = $officer->getCountOfOfficers($template->shift);
 
 echo $template;
 

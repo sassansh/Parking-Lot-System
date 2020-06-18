@@ -20,6 +20,19 @@ class Officer{
         return $results;
     }
 
+    // GET ALL SHIFTS OF OFFICERS
+    public function getShifts(){
+        $this->db->query("
+            SELECT DISTINCT Shift 
+            FROM Parking_Lot_Employee e, Officer o
+            WHERE e.Employee_ID = o.Employee_ID;
+        ");
+
+        // ASSIGN RESULT SET
+        $results = $this->db->resultSet();
+        return $results;
+    }
+
     // GET ALL PASS HOLDERS AND THEIR PASSES
     public function getAllOfficersPatrollingAllLots(){
         $this->db->query("
@@ -37,13 +50,16 @@ class Officer{
         return $results;
     }
 
-     // COUNT ALL OFFICERS
-     public function getCountOfOfficers()
+     // COUNT ALL OFFICERS BY SHIFT
+     public function getCountOfOfficers($shift)
      {
          $this->db->query("
-             SELECT COUNT(Officer_ID) AS NumberOfOfficers
-             FROM Officer;
+             SELECT COUNT(Officer_ID) AS NumberOfOfficers, Shift
+             FROM Officer
+             WHERE Officer.Shift = :shift;
          ");
+
+         $this->db->bind(':shift', $shift);
  
          // ASSIGN RESULT SET
          $results = $this->db->single();

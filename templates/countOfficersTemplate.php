@@ -5,11 +5,20 @@
         <h1 class="h2">Officers on Patrol</h1>
     </div>
 <form method="post" action="countofficers.php">
+<div class="form-group">
+            <label>Select Shift</label>
+            <select name="Shift" class="form-control">
+                <option value="0">Select Shift</option>
+                <?php foreach ($officers1 as $officer) : ?>
+                    <option value="<?php echo $officer->Shift; ?>"><?php echo str_replace('_', ' ', $officer->Shift); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
     <input type="submit" name="show" class="btn btn-primary" value="Show Count Of Officers">
 </form>
 <div class=officer-count>
     <p><?php if ($show == 'Show Count Of Officers') {
-            echo '<br>There are currently <b>'.$officers->NumberOfOfficers.'</b> employed officers across the parking lots!<br>';
+            echo '<br>There are currently <b>'.$officers->NumberOfOfficers.'</b> officers working the <b>'.$officers->Shift.'</b> shift.<b>';
             echo '<p style="font-size:70px">';
             for ($x = 0; $x < $officers->NumberOfOfficers; $x++) {
                 echo '&#128110;&#8205;&#9794;&#65039';
@@ -19,13 +28,3 @@
 </div>
 </main>
 <?php include 'inc/footer.php'; ?>
-
-<!-- <style>
-.officer-count {
-    text-decoration: underline;
-    line-height: 1.6;
-    font-style: italic;
-    font-family: 'Roboto mono', monospace;
-    font-size: 40px;
-}
-</style> -->

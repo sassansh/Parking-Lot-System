@@ -10,7 +10,7 @@ if(isset($_POST['update'])) {
     $hdmRateChange = $_POST['hdmRateChange'];
     $newPrice = $_POST['newPrice'];
     if($rate->update($rateTypeChange, $hdmRateChange, $newPrice) == true) {
-        redirect('rateUpdate.php', $rateTypeChange.'\'s '.str_replace('_', ' ', $hdmRateChange).' Updated to '.$newPrice, 'success');
+        redirect('rateUpdate.php', $rateTypeChange.'\'s '.str_replace('_', ' ', $hdmRateChange).' Updated to $'.$newPrice, 'success');
     } else {
         redirect('rateUpdate.php', 'Rate Not Updated', 'error');
     }

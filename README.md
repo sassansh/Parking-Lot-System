@@ -8,7 +8,7 @@
 
 > Built as a group project for CPSC 304 (Relational Databases)
 
-> PHP, mySQL, XAMPP, Bootstrap
+> PHP, PySQL, XAMPP, Bootstrap
 
 ![ER Diagram](ER-Diagram.png)
 

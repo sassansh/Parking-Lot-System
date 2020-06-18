@@ -9,6 +9,8 @@
             <thead>
                 <tr>
                     <th>Parking Pass ID</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
                     <th>Issue Date</th>
                     <th>Expiry Date</th>
                     <th>Lot ID</th>
@@ -18,6 +20,8 @@
             <?php foreach ($parkingPasses as $parkingPass) : ?>
                 <tr>
                     <td><?php echo $parkingPass->Parking_Pass_ID; ?></td>
+                    <td><?php echo $parkingPass->First_Name; ?></td>
+                    <td><?php echo $parkingPass->Last_Name; ?></td>
                     <td><?php echo $parkingPass->Issue_Date_Time; ?></td>
                     <td><?php echo $parkingPass->Expiry_Date_Time; ?></td>
                     <td><?php echo $parkingPass->Lot_ID; ?></td>

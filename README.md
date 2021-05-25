@@ -59,11 +59,11 @@ You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and
      git clone https://github.com/sassansh/Parking-Lot-System.git
    ```
 
-2. Start up XAMPP by pressing `Start`:
+2. Start up XAMPP by pressing `Start` under `General`:
 
 ![XAMPP General](/images/xampp-general.png)
 
-3. Verify that Apache and MySQL are running under `Services`.
+3. Verify that `Apache` and `MySQL` are running under `Services`.
 
 ![XAMPP Services](/images/xampp-services.png)
 
@@ -71,15 +71,15 @@ You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and
 
 ![XAMPP Network](/images/xampp-network.png)
 
-5. Mount and open the XAMP local data volume by pressing `Mount` then `Explore`:
+5. Mount and open the XAMPP data volume by pressing `Mount` then `Explore` under `Volumes`:
 
 ![XAMPP Volumes](/images/xampp-volumes.png)
 
-6. Copy all files in `/htdocs/` of this repo to you XAMPP data volume under `/htdocs/`.
+6. Copy all files in `/htdocs/` of this repo to your XAMPP data volume under `/htdocs/`.
 
 ![XAMPP Dir](/images/xampp-dir.png)
 
-8. To set up the database with initial structure and data, browse to 
+8. For database setup, browse to 
 
    ```https
      http://localhost:8080/phpmyadmin
@@ -95,7 +95,7 @@ You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and
 
 ![PHPMyAdmin SQL](/images/phpmyadmin-sql.png)
 
-11. Congrats you are now ready to browse the website interface. Visit:
+11. Congrats you are now ready to browse the website. Visit:
 
    ```https
      http://localhost:8080/

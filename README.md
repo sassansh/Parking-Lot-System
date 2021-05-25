@@ -29,7 +29,6 @@
 - [Technology Stack 🛠️](#technology-stack-)
 - [Prerequisites 🍪](#prerequisites-)
 - [Setup And Deployment 🔧](#setup-and-deployment-)
-- [Upcoming Features / Improvements 🔗](#upcoming-features-/-improvements-)
 - [The Team 👨🏻‍💻](#the-team-)
 - [Contact 📧](#contact-)
 

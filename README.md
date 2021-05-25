@@ -69,6 +69,8 @@ You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and
 
 4. Enable port forwarding by clicking `Enable` under `Network`.
 
+![XAMPP Network](/images/xampp-network.png)
+
 5. Mount and open the XAMP local data volume by pressing `Mount` then `Explore`:
 
 ![XAMPP Volumes](/images/xampp-volumes.png)

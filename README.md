@@ -27,11 +27,17 @@
 ## Table of Contents
 
 - [Technology Stack 🛠️](#technology-stack-)
+- [Database Diagram 🗒](#database-diagram-)
 - [Prerequisites 🍪](#prerequisites-)
 - [Setup And Deployment 🔧](#setup-and-deployment-)
 - [The Team 👨🏻‍💻](#the-team-)
 - [Contact 📧](#contact-)
 
+## Database Diagram 🗒
+
+For the course, we designed, normalized and sketched a database diagram:
+
+![DB Diagram](/images/db-diagram.png)
 ## Technology Stack 🛠️
 
 Dependencies used in this project:

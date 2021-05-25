@@ -7,7 +7,7 @@
 class Database {
     private $host = 'localhost';
     private $username = 'root';
-    private $password = 'root';
+    private $password = '';
     private $dbname = 'parking_lot';
 
     private $dbh;

@@ -1,43 +1,123 @@
+<!-- PROJECT LOGO -->
+<br />
 <p align="center">
-<img src="https://i.imgur.com/3gTOQiP.png" width="600" height="215" alt="Parking Lot Banner"><br/>
+  <h1 align="center">Parking Lot System 🚘</h1>
+
+  <p align="center">
+    A parking lot database management system for both employees and customers. Built as a group project for UBC CPSC 304 (Relational Databases).
+    <br />
+    <br />
+    <a href="https://sassanshokoohi.ca">About Me</a>
+    ·
+    <a href="https://github.com/sassansh/Parking-Lot-System/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/sassansh/Parking-Lot-System/issues">Request Feature</a>
+  </p>
 </p>
 
-# Parking Lot System
+![GitHub contributors](https://img.shields.io/github/contributors/sassansh/Parking-Lot-System?color=ffcc66&style=for-the-badge)
+![GitHub stars](https://img.shields.io/github/stars/sassansh/Parking-Lot-System?color=ffcc66&style=for-the-badge)
+[![GitHub forks](https://img.shields.io/github/forks/sassansh/Parking-Lot-System?style=for-the-badge)](https://github.com/sassansh/Parking-Lot-System/network)
+[![GitHub issues](https://img.shields.io/github/issues/sassansh/Parking-Lot-System?color=ffcc66&style=for-the-badge)](https://github.com/sassansh/Parking-Lot-System/issues)
+[![GitHub license](https://img.shields.io/github/license/sassansh/Parking-Lot-System?style=for-the-badge)](https://github.com/sassansh/Parking-Lot-System/blob/master/LICENSE)
+[![LinkedIn][linkedin-shield]][linkedin-url]
 
-A parking lot database management system for both employees and customers.
-
-Built as a group project for CPSC 304 (Relational Databases)
-
-PHP, MySQL, XAMPP, Bootstrap
-
-![ER Diagram](/images/db-diagram.png)
-
----
+![Site preview](/images/homepage.png)
 
 ## Table of Contents
 
-- [Installation](#installation)
-- [Team](#team)
+- [Technology Stack 🛠️](#technology-stack-)
+- [Prerequisites 🍪](#prerequisites-)
+- [Setup And Deployment 🔧](#setup-and-deployment-)
+- [Upcoming Features / Improvements 🔗](#upcoming-features-/-improvements-)
+- [The Team 👨🏻‍💻](#the-team-)
+- [Contact 📧](#contact-)
 
----
+## Technology Stack 🛠️
 
-## Installation
+Dependencies used in this project:
 
-- Install [XAMPP](https://www.apachefriends.org/index.html) on your machine.
+[XAMPP](https://www.apachefriends.org/index.html)
+| [MySQL](https://www.mysql.com/)
+| [PHP](https://www.php.net/)
+| [Bootstrap](https://getbootstrap.com/)
 
-### Clone
+## Prerequisites 🍪
 
-- Clone this repo to your local htdocs folder.
+You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and [Git](https://git-scm.com/) installed on your PC.
 
-### Setup
+## Setup And Deployment 🔧
 
-- Make sure you have started up XAMPP and that Apache and mySQL are running.
-- Browse to index.php in your browser.
+1. Clone the repo using:
 
----
+   ```bash
+     git clone https://github.com/sassansh/Parking-Lot-System.git
+   ```
 
-## Team
+2. Start up XAMPP by pressing `Start`:
 
-- [Jun Kim](https://github.com/Junkim97)
-- [Tony Wu](https://github.com/tonywu94)
-- [Sassan Shokoohi](https://github.com/sassansh)
+![XAMPP General](/images/xampp-general.png)
+
+3. Verify that Apache and MySQL are running under `Services`.
+
+![XAMPP Services](/images/xampp-services.png)
+
+4. Enable port forwarding by clicking `Enable` under `Network`.
+
+5. Mount and open the XAMP local data volume by pressing `Mount` then `Explore`:
+
+![XAMPP Volumes](/images/xampp-volumes.png)
+
+6. Copy all files in `/htdocs/` of this repo to you XAMPP data volume under `/htdocs/`.
+
+![XAMPP Dir](/images/xampp-dir.png)
+
+8. To set up the database with initial structure and data, browse to 
+
+   ```https
+     http://localhost:8080/phpmyadmin
+   ```
+
+9. To setup a new empty database named `parking_lot` follow these 2 steps:
+
+![PHPMyAdmin New](/images/phpmyadmin-new.png)
+
+![PHPMyAdmin DB Name](/images/phpmyadmin-dbnew.png)
+
+10. To populate the new db with the structure and data, copy the contents of `/sql/create_and_insert.sql` and run it using phpmyadmin:
+
+![PHPMyAdmin SQL](/images/phpmyadmin-sql.png)
+
+11. Congrats you are now ready to browse the website interface. Visit:
+
+   ```https
+     http://localhost:8080/
+   ```
+
+![Insert New Space](/images/insert-new-space.png)
+
+![Customers](/images/customers.png)
+
+![Officers](/images/officers.png)
+
+![Count Officers](/images/count-officers.png)
+
+![Lot Rates](/images/lot-rates.png)
+
+## The Team 👨🏻‍💻
+
+
+Jun Kim - [GitHub](https://github.com/Junkim97)
+
+Tony Wu - [GitHub](https://github.com/tonywu94)
+
+Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
+
+## Contact 📧
+
+Sassan Shokoohi - sassansh@student.ubc.ca
+
+Project Link: [https://github.com/sassansh/Parking-Lot-System](https://github.com/sassansh/Parking-Lot-System)
+
+[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
+[linkedin-url]: https://www.linkedin.com/in/sassanshokoohi/

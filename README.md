@@ -4,13 +4,13 @@
 
 # Parking Lot System
 
-> A parking lot database management system for both employees and customers.
+A parking lot database management system for both employees and customers.
 
-> Built as a group project for CPSC 304 (Relational Databases)
+Built as a group project for CPSC 304 (Relational Databases)
 
-> PHP, MySQL, XAMPP, Bootstrap
+PHP, MySQL, XAMPP, Bootstrap
 
-![ER Diagram](ER-Diagram.png)
+![ER Diagram](/images/db-diagram.png)
 
 ---
 

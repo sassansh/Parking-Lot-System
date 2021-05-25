@@ -113,9 +113,9 @@ You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and
 
 Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
 
-Jun Kim - [GitHub](https://github.com/Junkim97)
+Tony Wu - [GitHub](https://github.com/itstonywu) - [LinkedIn](https://www.linkedin.com/in/tonywu94/)
 
-Tony Wu - [LinkedIn](https://www.linkedin.com/in/tonywu94/)
+Jun Kim - [GitHub](https://github.com/Junkim97)
 
 
 ## Contact 📧

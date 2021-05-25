@@ -111,12 +111,12 @@ You should have [XAMPP v7.3.28](https://www.apachefriends.org/download.html) and
 
 ## The Team 👨🏻‍💻
 
+Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
 
 Jun Kim - [GitHub](https://github.com/Junkim97)
 
 Tony Wu - [LinkedIn](https://www.linkedin.com/in/tonywu94/)
 
-Sassan Shokoohi - [GitHub](https://github.com/sassansh) - [LinkedIn](https://www.linkedin.com/in/sassanshokoohi/)
 
 ## Contact 📧
 
